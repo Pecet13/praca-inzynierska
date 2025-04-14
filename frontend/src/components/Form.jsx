@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import api from "../api";
 import { useNavigate } from "react-router-dom";
-import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
+import { AuthContext } from "../context/AuthContext";
 import "../styles/Form.css";
 
 function Form({ route, method }) {
@@ -9,6 +9,8 @@ function Form({ route, method }) {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const navigate = useNavigate();
+
+    const { login } = useContext(AuthContext);
 
     const name = method === "login" ? "Log in" : "Register";
 
@@ -23,8 +25,7 @@ function Form({ route, method }) {
         try {
             const res = await api.post(route, { username, password });
             if (method === "login") {
-                localStorage.setItem(ACCESS_TOKEN, res.data.access);
-                localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
+                login(res.data.access, res.data.refresh);
                 navigate("/");
             } else {
                 navigate("/login");
