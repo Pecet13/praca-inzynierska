@@ -10,28 +10,31 @@ import MyReviews from "./pages/MyReviews";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Navbar from "./components/Navbar";
+import "./styles/App.css";
 
 function App() {
     return (
         <AuthProvider>
             <BrowserRouter>
                 <Navbar />
-                <Routes>
-                    <Route
-                        path="/my-reviews"
-                        element={
-                            <ProtectedRoute>
-                                <MyReviews />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route path="/" element={<Home />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
-                    <Route path="/ranking" element={<Ranking />} />
-                    <Route path="/charts" element={<Charts />} />
-                    <Route path="*" element={<NotFound />} />
-                </Routes>
+                <div className="app-container">
+                    <Routes>
+                        <Route
+                            path="/my-reviews"
+                            element={
+                                <ProtectedRoute>
+                                    <MyReviews />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route path="/" element={<Home />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
+                        <Route path="/ranking" element={<Ranking />} />
+                        <Route path="/charts" element={<Charts />} />
+                        <Route path="*" element={<NotFound />} />
+                    </Routes>
+                </div>
             </BrowserRouter>
         </AuthProvider>
     );

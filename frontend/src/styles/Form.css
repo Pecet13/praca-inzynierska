@@ -48,11 +48,3 @@
 .form-button:hover {
     background-color: #66c4ea;
 }
-
-.form-button.secondary {
-    background-color: #e0e0e0;
-}
-
-.form-button.secondary:hover {
-    background-color: #d0d0d0;
-}

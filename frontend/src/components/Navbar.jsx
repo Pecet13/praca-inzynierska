@@ -16,21 +16,27 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <div>
-                <Link to="/">Home</Link>
+            <div className="navbar-left">
+                <Link to="/" className="nav-link strong">Home</Link>
+                <Link to="/ranking" className="nav-link">Ranking</Link>
+                <Link to="/charts" className="nav-link">Charts</Link>
+                {isLoggedIn && (
+                    <Link to="/my-reviews" className="nav-link">My reviews</Link>
+                )}
             </div>
-            {isLoggedIn && <Link to="/my-reviews">My reviews</Link>}
-            <Link to="/ranking">Ranking</Link>
-            <Link to="/charts">Charts</Link>
-            {isLoggedIn ? (
-                <span className="logout-button" onClick={handleLogout}>
-                    Logout
-                </span>
-            ) : (
-                <span className="login-button" onClick={handleLogin}>
-                    Login
-                </span>
-            )}
+            <div className="navbar-right">
+                {isLoggedIn ? (
+                    <>
+                        <span className="nav-link" onClick={handleLogout}>
+                            Log out
+                        </span>
+                    </>
+                ) : (
+                    <span className="nav-link" onClick={handleLogin}>
+                        Log in
+                    </span>
+                )}
+            </div>
         </nav>
     );
 };
