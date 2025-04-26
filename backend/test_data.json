@@ -1,0 +1,93 @@
+[
+    {
+      "model": "api.product",
+      "pk": 1,
+      "fields": {
+        "name": "Kawa Arabica 100%",
+        "description": "Delikatna, lekko kwaskowa kawa z Ameryki Południowej",
+        "image_url": null
+      }
+    },
+    {
+      "model": "api.product",
+      "pk": 2,
+      "fields": {
+        "name": "Kawa Robusta Intensywna",
+        "description": "Mocna, wyrazista kawa z wysoką zawartością kofeiny",
+        "image_url": null
+      }
+    },
+    {
+      "model": "api.product",
+      "pk": 3,
+      "fields": {
+        "name": "Kawa Espresso Blend",
+        "description": "Mieszanka ziaren idealna do espresso, pełny smak",
+        "image_url": null
+      }
+    },
+    {
+      "model": "api.product",
+      "pk": 4,
+      "fields": {
+        "name": "Kawa Etiopia Yirgacheffe",
+        "description": "Aromatyczna kawa o nutach kwiatowych i cytrusowych",
+        "image_url": null
+      }
+    },
+    {
+      "model": "api.product",
+      "pk": 5,
+      "fields": {
+        "name": "Kawa Kolumbia Supremo",
+        "description": "Pełne body, nuty karmelu i czekolady",
+        "image_url": null
+      }
+    },
+    {
+      "model": "api.product",
+      "pk": 6,
+      "fields": {
+        "name": "Kawa Brazylia Santos",
+        "description": "Łagodna kawa o niskiej kwasowości i orzechowym posmaku",
+        "image_url": null
+      }
+    },
+    {
+      "model": "api.product",
+      "pk": 7,
+      "fields": {
+        "name": "Kawa Kenia AA",
+        "description": "Mocna, intensywna kawa z nutą jagód",
+        "image_url": null
+      }
+    },
+    {
+      "model": "api.product",
+      "pk": 8,
+      "fields": {
+        "name": "Kawa Rwanda Red Bourbon",
+        "description": "Wyraźny smak czerwonych owoców i miodu",
+        "image_url": null
+      }
+    },
+    {
+      "model": "api.product",
+      "pk": 9,
+      "fields": {
+        "name": "Kawa Indie Monsooned Malabar",
+        "description": "Bardzo łagodna, niemal bezkwasowa kawa",
+        "image_url": null
+      }
+    },
+    {
+      "model": "api.product",
+      "pk": 10,
+      "fields": {
+        "name": "Kawa Kostaryka Tarrazu",
+        "description": "Soczysta kawa o lekkiej kwasowości i owocowym aromacie",
+        "image_url": null
+      }
+    }
+]
+  
