@@ -3,6 +3,7 @@ import api from "../api";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import "../styles/Form.css";
+import "../styles/Button.css";
 
 function Form({ route, method }) {
     const [username, setUsername] = useState("");
@@ -61,12 +62,12 @@ function Form({ route, method }) {
                     placeholder="Confirm Password"
                 />
             )}
-            <button className="form-button" type="submit">
+            <button className="button" type="submit">
                 {name}
             </button>
             {method === "login" && (
                 <button
-                    className="form-button"
+                    className="button"
                     type="button"
                     onClick={() => navigate("/register")}
                 >
