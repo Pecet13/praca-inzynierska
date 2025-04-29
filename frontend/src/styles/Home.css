@@ -43,5 +43,17 @@
     width: 4rem;
     height: 4rem;
     border-radius: 10px;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
+}
+
+.product-name {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.product-name:hover {
+    text-decoration: underline;
 }

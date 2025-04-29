@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound";
 import Ranking from "./pages/Ranking";
 import Charts from "./pages/Charts";
 import MyReviews from "./pages/MyReviews";
+import ProductPage from "./pages/ProductPage";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Navbar from "./components/Navbar";
@@ -32,6 +33,7 @@ function App() {
                         <Route path="/register" element={<Register />} />
                         <Route path="/ranking" element={<Ranking />} />
                         <Route path="/charts" element={<Charts />} />
+                        <Route path="/products/:id" element={<ProductPage />} />
                         <Route path="*" element={<NotFound />} />
                     </Routes>
                 </div>

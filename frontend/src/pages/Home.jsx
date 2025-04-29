@@ -4,6 +4,7 @@ import api from "../api";
 import placeholder from "../assets/placeholder.png";
 import "../styles/Home.css";
 import "../styles/Button.css";
+import { Link } from "react-router-dom";
 
 function Home() {
     const [products, setProducts] = useState([]);
@@ -55,7 +56,9 @@ function Home() {
                                 }
                                 alt={product.name}
                             />
-                            <h2>{product.name}</h2>
+                            <Link to={`/products/${product.id}`} className="product-name">
+                                {product.name}
+                            </Link>
                         </div>
                         <div className="product-right">
                             {isLoggedIn && (
