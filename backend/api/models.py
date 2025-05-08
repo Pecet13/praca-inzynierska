@@ -23,11 +23,16 @@ class Comparison(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     product1 = models.ForeignKey(Product, related_name='product1', on_delete=models.CASCADE)
     product2 = models.ForeignKey(Product, related_name='product2', on_delete=models.CASCADE)
-    result = models.CharField(max_length=100, choices=[('product1', 'Product 1'), ('product2', 'Product 2'), ('draw', 'Draw')], default='draw')
+    result = models.CharField(max_length=100, choices=[('more', 'More'), ('less', 'Less'), ('equal', 'Equal')], default='equal')
     user_created = models.BooleanField(default=True)
 
     def __str__(self):
-        return f"{self.product1.name} vs {self.product2.name} - {self.category.name}, Result: {self.result}"
+        res = f"Comparison in category: {self.category.name}, "
+        if self.result == 'equal':
+            res += f"{self.product1.name} and {self.product2.name} are equal"
+        else:
+            res += f"{self.product1.name} is {self.result} than {self.product2.name}"
+        return res
     
 
 class Ranking(models.Model):

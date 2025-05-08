@@ -4,12 +4,13 @@ import api from "../api";
 import placeholder from "../assets/placeholder.png";
 import "../styles/Home.css";
 import "../styles/Button.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Home() {
     const [products, setProducts] = useState([]);
     const [search, setSearch] = useState("");
     const { isLoggedIn } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     useEffect(() => {
         getProducts();
@@ -63,7 +64,11 @@ function Home() {
                         <div className="product-right">
                             {isLoggedIn && (
                                 <div>
-                                    <button className="button">
+                                    <button 
+                                    className="button"
+                                    onClick={() => {
+                                        navigate(`/products/${product.id}/review`);
+                                    }}>
                                         Add review
                                     </button>
                                 </div>

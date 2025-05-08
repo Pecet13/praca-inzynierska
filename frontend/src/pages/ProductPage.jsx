@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import api from "../api";
 import placeholder from "../assets/placeholder.png";
@@ -10,6 +10,7 @@ function ProductPage() {
     const { id } = useParams();
     const { isLoggedIn } = useContext(AuthContext);
     const [product, setProduct] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         getProduct();
@@ -45,7 +46,14 @@ function ProductPage() {
             </div>
             {isLoggedIn && (
                 <div>
-                    <button className="button">Add review</button>
+                    <button
+                        className="button"
+                        onClick={() => {
+                            navigate(`/products/${id}/review`);
+                        }}
+                    >
+                        Add review
+                    </button>
                 </div>
             )}
         </div>
