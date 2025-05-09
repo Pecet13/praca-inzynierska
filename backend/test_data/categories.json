@@ -1,0 +1,23 @@
+[
+    {
+        "model": "api.category",
+        "pk": 1,
+        "fields": {
+            "name": "Aroma"
+        }
+    },
+    {
+        "model": "api.category",
+        "pk": 2,
+        "fields": {
+            "name": "Power"
+        }
+    },
+    {
+        "model": "api.category",
+        "pk": 3,
+        "fields": {
+            "name": "Sweetness"
+        }
+    }
+]
