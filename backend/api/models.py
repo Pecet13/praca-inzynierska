@@ -34,6 +34,11 @@ class Comparison(models.Model):
             res += f"{self.product1.name} is {self.result} than {self.product2.name}"
         return res
     
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['user', 'category', 'product1', 'product2'], name='unique_user_comparison')
+        ]
+    
 
 class Ranking(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)

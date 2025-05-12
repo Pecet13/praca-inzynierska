@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.contrib.auth.models import User
 from rest_framework import generics
 from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -24,11 +23,21 @@ class ProductView(generics.RetrieveAPIView):
     permission_classes = [AllowAny]
 
 
-class ComparisonListView(generics.ListCreateAPIView):
+class CategoryListView(generics.ListAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+    permission_classes = [AllowAny]
+
+
+class ComparisonListCreateView(generics.ListCreateAPIView):
     serializer_class = ComparisonSerializer
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         user = self.request.user
-        product = self.request.query_params.get('product1')
-        return Comparison.objects.filter(user=user)
+        product1 = self.kwargs['pk']
+        return Comparison.objects.filter(user=user, product1=product1)
+    
+    def perform_create(self, serializer):
+        product1 = Product.objects.get(pk=self.kwargs['pk'])
+        serializer.save(user=self.request.user, product1=product1, user_created=True)
