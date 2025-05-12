@@ -18,9 +18,8 @@ function Home() {
 
     const getProducts = () => {
         api.get("/api/products/")
-            .then((res) => res.data)
-            .then((data) => {
-                setProducts(data);
+            .then((res) => {
+                setProducts(res.data);
             })
             .catch((err) => {
                 console.error(err);

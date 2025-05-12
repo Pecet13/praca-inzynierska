@@ -18,9 +18,8 @@ function ProductPage() {
 
     const getProduct = () => {
         api.get(`/api/products/${id}/`)
-            .then((res) => res.data)
-            .then((data) => {
-                setProduct(data);
+            .then((res) => {
+                setProduct(res.data);
             })
             .catch((err) => {
                 console.error(err);

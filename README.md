@@ -30,3 +30,13 @@ GRANT ALL PRIVILEGES ON DATABASE inz_db TO ...;
 python3 manage.py makemigrations
 python3 manage.py migrate
 ```
+
+logowanie do db
+```
+psql -h localhost -U ... -d inz_db;
+```
+
+wypisanie tabel
+```
+\dt
+```

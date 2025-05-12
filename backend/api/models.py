@@ -23,7 +23,7 @@ class Comparison(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     product1 = models.ForeignKey(Product, related_name='product1', on_delete=models.CASCADE)
     product2 = models.ForeignKey(Product, related_name='product2', on_delete=models.CASCADE)
-    result = models.CharField(max_length=100, choices=[('more', 'More'), ('less', 'Less'), ('equal', 'Equal')], default='equal')
+    result = models.CharField(max_length=100, choices=[('More', 'more'), ('Less', 'less'), ('Equal', 'equal')], default='Equal')
     user_created = models.BooleanField(default=True)
 
     def __str__(self):
