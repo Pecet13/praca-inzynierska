@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import api from "../api";
+import "../styles/Review.css";
+import "../styles/Button.css";
 
 function Review() {
     const { id } = useParams();
@@ -90,52 +92,69 @@ function Review() {
     };
 
     return (
-        <div>
+        <div className="review-wrapper">
             <h1>Review for: {productName}</h1>
-            {rows.map((row, index) => (
-                <div key={index}>
-                    <select
-                        value={row.category}
-                        onChange={(e) =>
-                            updateRow(index, "category", e.target.value)
-                        }
-                    >
-                        <option value="">Select Category</option>
-                        {categories.map((category) => (
-                            <option key={category.id} value={category.id}>
-                                {category.name}
-                            </option>
-                        ))}
-                    </select>
-                    <select
-                        value={row.result}
-                        onChange={(e) =>
-                            updateRow(index, "result", e.target.value)
-                        }
-                    >
-                        <option value="Equal">Equal</option>
-                        <option value="More">More</option>
-                        <option value="Less">Less</option>
-                    </select>
-                    <select
-                        value={row.product2}
-                        onChange={(e) =>
-                            updateRow(index, "product2", e.target.value)
-                        }
-                    >
-                        <option value="">Select Product</option>
-                        {products.map((product) => (
-                            <option key={product.id} value={product.id}>
-                                {product.name}
-                            </option>
-                        ))}
-                    </select>
-                    <button onClick={() => removeRow(index)}>Remove</button>
-                </div>
-            ))}
-            <button onClick={addRow}>Add comparison</button>
-            <button onClick={confirm}>Confirm</button>
-            <button onClick={cancel}>Cancel</button>
+            <div className="comparison-list">
+                {rows.map((row, index) => (
+                    <div className="comparison" key={index}>
+                        <select
+                            value={row.category}
+                            onChange={(e) =>
+                                updateRow(index, "category", e.target.value)
+                            }
+                        >
+                            <option value="">Select Category</option>
+                            {categories.map((category) => (
+                                <option key={category.id} value={category.id}>
+                                    {category.name}
+                                </option>
+                            ))}
+                        </select>
+                        <select
+                            value={row.result}
+                            onChange={(e) =>
+                                updateRow(index, "result", e.target.value)
+                            }
+                        >
+                            <option value="Equal">Equal</option>
+                            <option value="More">More</option>
+                            <option value="Less">Less</option>
+                        </select>
+                        <select
+                            value={row.product2}
+                            onChange={(e) =>
+                                updateRow(index, "product2", e.target.value)
+                            }
+                        >
+                            <option value="">Select Product</option>
+                            {products.map((product) => (
+                                <option key={product.id} value={product.id}>
+                                    {product.name}
+                                </option>
+                            ))}
+                        </select>
+                        {rows.length > 1 && (
+                            <button
+                                className="button"
+                                onClick={() => removeRow(index)}
+                            >
+                                Remove
+                            </button>
+                        )}
+                    </div>
+                ))}
+                <button className="button" onClick={addRow}>
+                    Add comparison
+                </button>
+            </div>
+            <div className="confirmation">
+                <button className="button-secondary" onClick={cancel}>
+                    Cancel
+                </button>
+                <button className="button" onClick={confirm}>
+                    Confirm
+                </button>
+            </div>
         </div>
     );
 }
