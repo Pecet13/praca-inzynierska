@@ -46,7 +46,8 @@ function ProductPage() {
             {isLoggedIn && (
                 <div>
                     <button
-                        className="button"
+                        className="button button-primary"
+                        type="button"
                         onClick={() => {
                             navigate(`/products/${id}/review`);
                         }}

@@ -1,8 +1,6 @@
 .button {
-    width: 100%;
-    padding: 14px;
-    margin: 10px 10px;
-    background-color: #84d3f4;
+    padding: 0.9rem;
+    margin: 0.5rem 0.5rem;
     color: #000;
     font-size: 1.1rem;
     border: none;
@@ -11,23 +9,39 @@
     transition: background-color 0.2s ease;
 }
 
-.button:hover {
+.button-primary {
+    background-color: #84d3f4;
+}
+
+.button-primary:hover {
     background-color: #66c4ea;
 }
 
 .button-secondary {
-    width: 100%;
-    padding: 14px;
-    margin: 10px 10px;
     background-color: #e76f51;
-    color: #000;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
 }
 
 .button-secondary:hover {
     background-color: #d65f4f;
+}
+
+.button-remove {
+    position: absolute;
+    right: -2rem;
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    font-size: 1.1rem;
+    line-height: 1;
+    padding: 0.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button-remove:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.button-full {
+    width: 100%;
 }

@@ -98,6 +98,7 @@ function Review() {
                 {rows.map((row, index) => (
                     <div className="comparison" key={index}>
                         <select
+                            className="select"
                             value={row.category}
                             onChange={(e) =>
                                 updateRow(index, "category", e.target.value)
@@ -111,6 +112,7 @@ function Review() {
                             ))}
                         </select>
                         <select
+                            className="select"
                             value={row.result}
                             onChange={(e) =>
                                 updateRow(index, "result", e.target.value)
@@ -121,6 +123,7 @@ function Review() {
                             <option value="Less">Less</option>
                         </select>
                         <select
+                            className="select"
                             value={row.product2}
                             onChange={(e) =>
                                 updateRow(index, "product2", e.target.value)
@@ -135,25 +138,40 @@ function Review() {
                         </select>
                         {rows.length > 1 && (
                             <button
-                                className="button"
+                                className="button button-remove"
+                                type="button"
                                 onClick={() => removeRow(index)}
                             >
-                                Remove
+                                x
                             </button>
                         )}
                     </div>
                 ))}
-                <button className="button" onClick={addRow}>
+            </div>
+            <div className="controls">
+                <button
+                    className="button button-primary"
+                    type="button"
+                    onClick={addRow}
+                >
                     Add comparison
                 </button>
-            </div>
-            <div className="confirmation">
-                <button className="button-secondary" onClick={cancel}>
-                    Cancel
-                </button>
-                <button className="button" onClick={confirm}>
-                    Confirm
-                </button>
+                <div className="confirmation">
+                    <button
+                        className=" button button-secondary button-full"
+                        type="button"
+                        onClick={cancel}
+                    >
+                        Cancel
+                    </button>
+                    <button
+                        className="button button-primary button-full"
+                        type="submit"
+                        onClick={confirm}
+                    >
+                        Confirm
+                    </button>
+                </div>
             </div>
         </div>
     );

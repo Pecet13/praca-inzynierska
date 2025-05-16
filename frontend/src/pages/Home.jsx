@@ -56,18 +56,25 @@ function Home() {
                                 }
                                 alt={product.name}
                             />
-                            <Link to={`/products/${product.id}`} className="product-name">
+                            <Link
+                                to={`/products/${product.id}`}
+                                className="product-name"
+                            >
                                 {product.name}
                             </Link>
                         </div>
                         <div className="product-right">
                             {isLoggedIn && (
                                 <div>
-                                    <button 
-                                    className="button"
-                                    onClick={() => {
-                                        navigate(`/products/${product.id}/review`);
-                                    }}>
+                                    <button
+                                        className="button button-primary"
+                                        type="button"
+                                        onClick={() => {
+                                            navigate(
+                                                `/products/${product.id}/review`
+                                            );
+                                        }}
+                                    >
                                         Add review
                                     </button>
                                 </div>

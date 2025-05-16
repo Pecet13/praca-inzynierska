@@ -62,12 +62,12 @@ function Form({ route, method }) {
                     placeholder="Confirm Password"
                 />
             )}
-            <button className="button" type="submit">
+            <button className="button button-primary button-full" type="submit">
                 {name}
             </button>
             {method === "login" && (
                 <button
-                    className="button"
+                    className="button button-primary button-full"
                     type="button"
                     onClick={() => navigate("/register")}
                 >
