@@ -18,6 +18,7 @@ function Review() {
         getProductName();
         getCategories();
         getProducts();
+        getComparisons();
     }, [id]);
 
     const getProductName = () => {
@@ -44,6 +45,22 @@ function Review() {
         api.get("/api/products/")
             .then((res) => {
                 setProducts(res.data.filter((product) => product.id !== +id));
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    };
+
+    const getComparisons = () => {
+        api.get(`/api/products/${id}/review/`)
+            .then((res) => {
+                if (res.data.length > 0) {
+                    setRows(res.data.map((item) => ({
+                        category: item.category.toString(),
+                        result: item.result,
+                        product2: item.product2.toString(),
+                    })));
+                }
             })
             .catch((err) => {
                 console.error(err);
@@ -83,7 +100,7 @@ function Review() {
             })
             .catch((err) => {
                 console.error(err);
-                alert("Error submitting review. See console for details.");
+                alert("Error submitting review.");
             });
     };
 
