@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User
+from django.db import transaction
 from rest_framework import generics, status
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
@@ -35,13 +36,35 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        user = self.request.user
         product1 = self.kwargs['pk']
-        return Comparison.objects.filter(user=user, product1=product1)
+        return Comparison.objects.filter(user=self.request.user, product1=product1)
     
-    def perform_create(self, serializer):
-        product1 = Product.objects.get(pk=self.kwargs['pk'])
-        serializer.save(user=self.request.user, product1=product1, user_created=True)
+    @transaction.atomic
+    def create(self, request, *args, **kwargs):
+        # Remove existing comparisons
+        product1 = Product.objects.get(pk=kwargs['pk'])
+        Comparison.objects.filter(user=request.user, product1=product1).delete()
+
+        # Validate and create new comparisons
+        serializer = self.get_serializer(data=request.data, many=isinstance(request.data, list))
+        serializer.is_valid(raise_exception=True)
+
+        instances = []
+        for instance in serializer.validated_data:
+            instances.append(
+                Comparison.objects.create(
+                    user=request.user,
+                    category=instance['category'],
+                    product1=product1,
+                    product2=instance['product2'],
+                    result=instance['result'],
+                    user_created=True
+                )
+            )
+        
+        # Serialize the created comparisons
+        out = ComparisonSerializer(instances, many=True)
+        return Response(out.data, status=status.HTTP_201_CREATED)
 
     def delete(self, request, pk):
         Comparison.objects.filter(user=request.user, product1=pk).delete()

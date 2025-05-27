@@ -1,6 +1,7 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import api from "../api";
 import placeholder from "../assets/placeholder.png";
+import "../styles/MyReviews.css";
 import "../styles/Home.css";
 import "../styles/Button.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -37,6 +38,7 @@ function MyReviews() {
 
     return (
         <div className="home-wrapper">
+            <h1 className="h1">My reviews</h1>
             <div className="product-list">
                 {products.map((product) => (
                     <div key={product.id} className="product">

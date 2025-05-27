@@ -55,11 +55,13 @@ function Review() {
         api.get(`/api/products/${id}/review/`)
             .then((res) => {
                 if (res.data.length > 0) {
-                    setRows(res.data.map((item) => ({
-                        category: item.category.toString(),
-                        result: item.result,
-                        product2: item.product2.toString(),
-                    })));
+                    setRows(
+                        res.data.map((item) => ({
+                            category: item.category.toString(),
+                            result: item.result,
+                            product2: item.product2.toString(),
+                        }))
+                    );
                 }
             })
             .catch((err) => {
@@ -85,14 +87,16 @@ function Review() {
     };
 
     const confirm = () => {
-        Promise.all(
-            rows.map((row) =>
-                api.post(`/api/products/${id}/review/`, {
-                    category: parseInt(row.category),
-                    product2: parseInt(row.product2),
-                    result: row.result,
-                })
-            )
+        console.log("API:", api);
+        console.log("api.post:", api?.post);
+        console.log("id:", id, "rows:", rows);
+        api.post(
+            `/api/products/${id}/review/`,
+            rows.map((row) => ({
+                category: parseInt(row.category, 10),
+                product2: parseInt(row.product2, 10),
+                result: row.result,
+            }))
         )
             .then(() => {
                 alert("Review submitted successfully.");
