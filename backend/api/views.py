@@ -61,6 +61,8 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
                     user_created=True
                 )
             )
+
+        self.check_cycle()
         
         # Serialize the created comparisons
         out = ComparisonSerializer(instances, many=True)
@@ -69,6 +71,9 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
     def delete(self, request, pk):
         Comparison.objects.filter(user=request.user, product1=pk).delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def check_cycle(self):
+        pass
 
 
 class ReviewListView(generics.ListAPIView):

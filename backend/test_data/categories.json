@@ -10,14 +10,21 @@
         "model": "api.category",
         "pk": 2,
         "fields": {
-            "name": "Power"
+            "name": "Intensity"
         }
     },
     {
         "model": "api.category",
         "pk": 3,
         "fields": {
-            "name": "Sweetness"
+            "name": "Acidity"
+        }
+    },
+    {
+        "model": "api.category",
+        "pk": 4,
+        "fields": {
+            "name": "Body"
         }
     }
 ]
