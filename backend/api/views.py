@@ -3,6 +3,7 @@ from django.db import transaction
 from rest_framework import generics, status
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
+from rest_framework.exceptions import ValidationError
 from .serializers import UserSerializer, ProductSerializer, CategorySerializer, ComparisonSerializer
 from .models import Product, Category, Comparison
 
@@ -49,20 +50,30 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
         serializer = self.get_serializer(data=request.data, many=isinstance(request.data, list))
         serializer.is_valid(raise_exception=True)
 
+        for item in serializer.validated_data:
+            category = item['category']
+            product2 = item['product2']
+            if item['result'] == 'equal':
+                continue
+            if item['result'] == 'more':
+                src_product, dst_product = product2, product1
+            else:
+                src_product, dst_product = product1, product2
+            if self.check_cycle(category, src_product, dst_product):
+                raise ValidationError(f'Cycle detected between {product1.name} and {product2.name} in category {category.name}.')
+
         instances = []
-        for instance in serializer.validated_data:
+        for item in serializer.validated_data:
             instances.append(
                 Comparison.objects.create(
                     user=request.user,
-                    category=instance['category'],
+                    category=item['category'],
                     product1=product1,
-                    product2=instance['product2'],
-                    result=instance['result'],
+                    product2=item['product2'],
+                    result=item['result'],
                     user_created=True
                 )
             )
-
-        self.check_cycle()
         
         # Serialize the created comparisons
         out = ComparisonSerializer(instances, many=True)
@@ -72,7 +83,7 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
         Comparison.objects.filter(user=request.user, product1=pk).delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-    def check_cycle(self):
+    def check_cycle(self, category, src_product, dest_product):
         pass
 
 
