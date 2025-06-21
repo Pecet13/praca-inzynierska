@@ -6,6 +6,7 @@ from rest_framework.response import Response
 from rest_framework.exceptions import ValidationError
 from .serializers import UserSerializer, ProductSerializer, CategorySerializer, ComparisonSerializer
 from .models import Product, Category, Comparison
+from .services import check_cycle
 
 
 class CreateUserView(generics.CreateAPIView):
@@ -42,9 +43,7 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
     
     @transaction.atomic
     def create(self, request, *args, **kwargs):
-        # Remove existing comparisons
         product1 = Product.objects.get(pk=kwargs['pk'])
-        Comparison.objects.filter(user=request.user, product1=product1).delete()
 
         # Validate and create new comparisons
         serializer = self.get_serializer(data=request.data, many=isinstance(request.data, list))
@@ -55,14 +54,17 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
             product2 = item['product2']
             if Comparison.objects.filter(user=request.user, category=category, product1=product2, product2=product1).exists():
                 raise ValidationError(f'You have already compared {product1.name} and {product2.name} in category {category.name}.')
-            if item['result'] == 'equal':
+            if item['result'] == 'Equal':
                 continue
-            if item['result'] == 'more':
+            if item['result'] == 'More':
                 src_product, dst_product = product2, product1
             else:
                 src_product, dst_product = product1, product2
-            if self.check_cycle(category, src_product, dst_product):
+            if check_cycle(request.user, category, src_product, dst_product):
                 raise ValidationError(f'Cycle detected between {product1.name} and {product2.name} in category {category.name}.')
+
+        # Remove existing comparisons
+        Comparison.objects.filter(user=request.user, product1=product1).delete()
 
         instances = []
         for item in serializer.validated_data:
@@ -84,9 +86,6 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
     def delete(self, request, pk):
         Comparison.objects.filter(user=request.user, product1=pk).delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-
-    def check_cycle(self, category, src_product, dest_product):
-        pass
 
 
 class ReviewListView(generics.ListAPIView):
