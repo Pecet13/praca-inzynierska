@@ -10,11 +10,9 @@ def check_cycle(user, category, src_product, dest_product):
         elif comparison.result == "Less":
             adj.setdefault(comparison.product2, []).append(comparison.product1)
 
-    print(adj)
     visited = []
     queue = deque([src_product])
     while queue:
-        print(queue)
         node = queue.popleft()
         if node == dest_product:
             return True
@@ -22,7 +20,6 @@ def check_cycle(user, category, src_product, dest_product):
             continue
         visited.append(node)
         for neighbor in adj.get(node, []):
-            print(neighbor)
             queue.append(neighbor)
     
     return False
