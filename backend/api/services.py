@@ -1,7 +1,7 @@
 from collections import deque
 from .models import Comparison
 
-def check_cycle(user, category, src_product, dest_product):
+def path_exists(user, category, src_product, dest_product):
     queryset = Comparison.objects.filter(user=user, category=category)
     adj = {}
     for comparison in queryset:
