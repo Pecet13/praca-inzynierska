@@ -104,7 +104,9 @@ function Review() {
             })
             .catch((err) => {
                 console.error(err);
-                alert("Error submitting review.");
+                const msg =
+                    err.response.data[0] || "Error submitting review.";
+                alert(msg);
             });
     };
 

@@ -53,6 +53,8 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
         for item in serializer.validated_data:
             category = item['category']
             product2 = item['product2']
+            if Comparison.objects.filter(user=request.user, category=category, product1=product2, product2=product1).exists():
+                raise ValidationError(f'You have already compared {product1.name} and {product2.name} in category {category.name}.')
             if item['result'] == 'equal':
                 continue
             if item['result'] == 'more':
