@@ -28,7 +28,7 @@ class Comparison(models.Model):
 
     def __str__(self):
         res = f"Comparison in category: {self.category.name}, "
-        if self.result == 'equal':
+        if self.result == 'Equal':
             res += f"{self.product1.name} and {self.product2.name} are equal"
         else:
             res += f"{self.product1.name} is {self.result} than {self.product2.name}"
