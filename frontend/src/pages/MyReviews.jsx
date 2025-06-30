@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import api from "../api";
+import { Link, useNavigate } from "react-router-dom";
 import placeholder from "../assets/placeholder.png";
 import "../styles/MyReviews.css";
 import "../styles/Home.css";
 import "../styles/Button.css";
-import { Link, useNavigate } from "react-router-dom";
 
 function MyReviews() {
     const [products, setProducts] = useState([]);

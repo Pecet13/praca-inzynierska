@@ -2,9 +2,9 @@ import { useState, useEffect, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import api from "../api";
 import placeholder from "../assets/placeholder.png";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/Home.css";
 import "../styles/Button.css";
-import { Link, useNavigate } from "react-router-dom";
 
 function Home() {
     const [products, setProducts] = useState([]);
