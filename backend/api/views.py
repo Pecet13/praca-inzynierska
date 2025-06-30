@@ -49,9 +49,16 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
         serializer = self.get_serializer(data=request.data, many=isinstance(request.data, list))
         serializer.is_valid(raise_exception=True)
 
+        # Check for duplicate comparisons and cycles
+        seen_comparisons = set()
         for item in serializer.validated_data:
             category = item['category']
             product2 = item['product2']
+            comparison_key = (category.id, product2.id)
+            if comparison_key in seen_comparisons:
+                raise ValidationError(f'Duplicate comparison with {product2.name} in category {category.name}.')
+            seen_comparisons.add(comparison_key)
+            
             if Comparison.objects.filter(user=request.user, category=category, product1=product2, product2=product1).exists():
                 raise ValidationError(f'You have already compared {product1.name} and {product2.name} in category {category.name}.')
             if item['result'] == 'Equal':

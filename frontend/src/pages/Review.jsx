@@ -104,8 +104,10 @@ function Review() {
             })
             .catch((err) => {
                 console.error(err);
-                const msg =
-                    err.response.data[0] || "Error submitting review.";
+                let msg = "Error submitting review.";
+                if (Array.isArray(err.response.data) && err.response.data.length === 1) {
+                    msg = err.response.data[0]
+                }
                 alert(msg);
             });
     };
