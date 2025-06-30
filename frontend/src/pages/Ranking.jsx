@@ -2,13 +2,15 @@ import { useState, useEffect } from "react";
 import api from "../api";
 import placeholder from "../assets/placeholder.png";
 import { Link } from "react-router-dom";
+import "../styles/Ranking.css";
 
 // TODO: reverse order, styling
 
 function Ranking() {
     const [rankings, setRankings] = useState([]);
     const [categories, setCategories] = useState([]);
-    const [category, setCategory] = useState(1);
+    const [category, setCategory] = useState(0);
+    const [reverse, setReverse] = useState(false);
 
     useEffect(() => {
         getRankings();
@@ -35,30 +37,42 @@ function Ranking() {
             });
     };
 
-    const filteredRanking = rankings.filter(
-        (item) => item.category.id === category
-    );
+    const base = rankings
+        .filter((item) => item.category.id === category)
+        .sort((a, b) => a.rank - b.rank);
+
+    let filteredRanking = reverse ? [...base].reverse() : base;
 
     return (
-        <div>
-            <h1>Ranking</h1>
-            <div className="category-selector">
+        <div className="ranking-wrapper">
+            <h1 className="h1">Ranking</h1>
+            <div className="select-wrapper">
                 <select
+                    className="select"
                     value={category}
                     onChange={(e) => setCategory(Number(e.target.value))}
                 >
+                    <option value="">Select Category</option>
                     {categories.map((cat) => (
                         <option key={cat.id} value={cat.id}>
                             {cat.name}
                         </option>
                     ))}
                 </select>
+                <label className="reverse">
+                    <span className="reverse-text">Reverse </span>
+                    <input
+                        type="checkbox"
+                        checked={reverse}
+                        onChange={(e) => setReverse(e.target.checked)}
+                    />
+                </label>
             </div>
-            <div className="product-list">
+            <div className="ranking-list">
                 {filteredRanking.map((item) => (
                     <div key={item.id} className="product">
                         <div className="product-left">
-                            <p className="product-name">{item.rank}.</p>
+                            <p className="product-rank">{item.rank}.</p>
                             <img
                                 className="product-image"
                                 src={
