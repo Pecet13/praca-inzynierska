@@ -47,4 +47,9 @@ class Ranking(models.Model):
     rank = models.IntegerField()
 
     def __str__(self):
-        return f"{self.product.name} - {self.category.name}, Ranking: {self.rank}"
+        return f"{self.product.name} - {self.category.name}, Rank: {self.rank}"
+    
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['category', 'product'], name='unique_product_ranking')
+        ]

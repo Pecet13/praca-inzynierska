@@ -1,6 +1,7 @@
 from collections import deque
+from django.db import transaction
 from django.db.models import Q
-from .models import Comparison, Product, Category
+from .models import Comparison, Product, Category, Ranking
 
 def path_exists(user, category, src_product, dest_product):
     # Build an adjacency list for the comparisons
@@ -71,3 +72,19 @@ def compute_rankings():
                 rankings[category][i]['Rank'] = i + 1
     
     return rankings
+
+
+@transaction.atomic
+def update_rankings():
+    rankings = compute_rankings()
+    for category, product_scores in rankings.items():
+        for product_score in product_scores:
+            product = product_score['Product']
+            score = product_score['Score']
+            rank = product_score['Rank']
+            Ranking.objects.update_or_create(
+                category=category,
+                product=product,
+                defaults={'score': score, 'rank': rank}
+            )
+    

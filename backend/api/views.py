@@ -4,8 +4,8 @@ from rest_framework import generics, status
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.exceptions import ValidationError
-from .serializers import UserSerializer, ProductSerializer, CategorySerializer, ComparisonSerializer
-from .models import Product, Category, Comparison
+from .serializers import UserSerializer, ProductSerializer, CategorySerializer, ComparisonSerializer, RankingSerializer
+from .models import Product, Category, Comparison, Ranking
 from .services import path_exists
 
 
@@ -96,4 +96,11 @@ class ReviewListView(generics.ListAPIView):
         comparisons = Comparison.objects.filter(user=self.request.user, user_created=True)
         product_ids = comparisons.values_list('product1', flat=True).distinct()
         return Product.objects.filter(id__in=product_ids)
-    
+
+
+class RankingListView(generics.ListAPIView):
+    serializer_class = RankingSerializer
+    permission_classes = [AllowAny]
+
+    def get_queryset(self):
+        return Ranking.objects.all()
