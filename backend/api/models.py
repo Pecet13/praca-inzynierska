@@ -47,7 +47,7 @@ class Ranking(models.Model):
     rank = models.IntegerField()
 
     def __str__(self):
-        return f"{self.product.name} - {self.category.name}, Rank: {self.rank}"
+        return f"{self.product.name} - {self.category.name}, Rank: {self.rank}, Score: {self.score}"
     
     class Meta:
         constraints = [

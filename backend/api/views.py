@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework.exceptions import ValidationError
 from .serializers import UserSerializer, ProductSerializer, CategorySerializer, ComparisonSerializer, RankingSerializer
 from .models import Product, Category, Comparison, Ranking
-from .services import path_exists
+from .services import user_path_exists
 
 
 class CreateUserView(generics.CreateAPIView):
@@ -64,10 +64,10 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
             if item['result'] == 'Equal':
                 continue
             if item['result'] == 'More':
-                src_product, dst_product = product2, product1
+                src_product_id, dst_product_id = product2.id, product1.id
             else:
-                src_product, dst_product = product1, product2
-            if path_exists(request.user, category, src_product, dst_product):
+                src_product_id, dst_product_id = product1.id, product2.id
+            if user_path_exists(request.user, category, src_product_id, dst_product_id):
                 raise ValidationError(f'Cycle detected between {product1.name} and {product2.name} in category {category.name}.')
 
         # Remove existing comparisons

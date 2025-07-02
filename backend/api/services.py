@@ -3,27 +3,27 @@ from django.db import transaction
 from django.db.models import Q
 from .models import Comparison, Product, Category, Ranking
 
-def path_exists(user, category, src_product, dest_product):
+def user_path_exists(user, category, src_product_id, dest_product_id):
     # Build an adjacency list for the comparisons
     queryset = Comparison.objects.filter(user=user, category=category)
     adj = {}
     for comparison in queryset:
         if comparison.result == "More":
-            adj.setdefault(comparison.product1, []).append(comparison.product2)
+            adj.setdefault(comparison.product1.id, set()).add(comparison.product2.id)
         elif comparison.result == "Less":
-            adj.setdefault(comparison.product2, []).append(comparison.product1)
+            adj.setdefault(comparison.product2.id, set()).add(comparison.product1.id)
 
     # Perform BFS to check if a path exists
-    visited = []
-    queue = deque([src_product])
+    visited = set()
+    queue = deque([src_product_id])
     while queue:
         node = queue.popleft()
-        if node == dest_product:
+        if node == dest_product_id:
             return True
         if node in visited:
             continue
-        visited.append(node)
-        for neighbor in adj.get(node, []):
+        visited.add(node)
+        for neighbor in adj.get(node, ()):
             queue.append(neighbor)
     
     return False
@@ -38,7 +38,9 @@ def get_pair_result(category, product1, product2):
         return 'Product1'
     elif wins2 > wins1:
         return 'Product2'
-    return 'Draw'
+    elif wins1 == wins2 and comparisons.exists():
+        return 'Draw'
+    return None
 
 
 def compute_rankings():
@@ -46,21 +48,55 @@ def compute_rankings():
     products = Product.objects.all()
     rankings = {}
 
-    # Calculate score for each product in each category using Copeland's method
     for category in categories:
         rankings[category] = [{'Product': product, 'Score': 0} for product in products]
+        
+        # Get score for direct comparisons
+        direct = {}
         for i in range(len(products)):
             for j in range(i + 1, len(products)):
                 product1 = products[i]
                 product2 = products[j]
                 result = get_pair_result(category, product1, product2)
                 if result == 'Product1':
-                    rankings[category][i]['Score'] += 1
+                    direct [(i, j)] = 1
                 elif result == 'Product2':
-                    rankings[category][j]['Score'] += 1
+                    direct [(j, i)] = 1
+                elif result == 'Draw':
+                    direct [(i, j)] = direct [(j, i)] = 0.5
+
+        # Build an adjacency list for the direct comparisons
+        adj = {}
+        for (p1, p2), score in direct.items():
+            if score == 1:
+                adj.setdefault(p1, set()).add(p2)
+
+        # Compute transitive closure using BFS
+        reachable = {i: set() for i in range(len(products))}
+        for src in range(len(products)):
+            queue = deque([src])
+            while queue:
+                node = queue.popleft()
+                for neighbor in adj.get(node, ()):
+                    if neighbor not in reachable[src]:
+                        reachable[src].add(neighbor)
+                        queue.append(neighbor)
+
+        # Infer score for indirect comparisons
+        for i in range(len(products)):
+            for j in range(len(products)):
+                if i == j or (i, j) in direct or (j, i) in direct:
+                    continue
+                if j in reachable[i]:
+                    direct[(i, j)] = 1
+                elif i in reachable[j]:
+                    direct[(j, i)] = 1
                 else:
-                    rankings[category][i]['Score'] += 0.5
-                    rankings[category][j]['Score'] += 0.5
+                    direct[(i, j)] = direct[(j, i)] = 0.5
+
+        # Calculate score for each product using Copeland's method
+        for (p1, p2), score in direct.items():
+            rankings[category][p1]['Score'] += score
 
     # Sort products by score and assign ranks
     for category, product_scores in rankings.items():
