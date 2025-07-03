@@ -87,9 +87,6 @@ function Review() {
     };
 
     const confirm = () => {
-        console.log("API:", api);
-        console.log("api.post:", api?.post);
-        console.log("id:", id, "rows:", rows);
         api.post(
             `/api/products/${id}/review/`,
             rows.map((row) => ({

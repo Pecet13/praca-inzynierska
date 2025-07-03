@@ -7,7 +7,7 @@ import "../styles/Ranking.css";
 function Ranking() {
     const [rankings, setRankings] = useState([]);
     const [categories, setCategories] = useState([]);
-    const [category, setCategory] = useState(0);
+    const [category, setCategory] = useState(1);
     const [reverse, setReverse] = useState(false);
 
     useEffect(() => {
@@ -50,7 +50,6 @@ function Ranking() {
                     value={category}
                     onChange={(e) => setCategory(Number(e.target.value))}
                 >
-                    <option value="">Select Category</option>
                     {categories.map((cat) => (
                         <option key={cat.id} value={cat.id}>
                             {cat.name}
