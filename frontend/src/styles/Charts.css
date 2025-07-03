@@ -1,0 +1,26 @@
+.charts-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.charts-select-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.select-left,
+.select-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.select-text {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}

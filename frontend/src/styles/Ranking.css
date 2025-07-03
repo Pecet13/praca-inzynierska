@@ -5,7 +5,7 @@
     height: calc(100vh - 80px);
 }
 
-.select-wrapper {
+.ranking-select-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -4,8 +4,6 @@ import placeholder from "../assets/placeholder.png";
 import { Link } from "react-router-dom";
 import "../styles/Ranking.css";
 
-// TODO: reverse order, styling
-
 function Ranking() {
     const [rankings, setRankings] = useState([]);
     const [categories, setCategories] = useState([]);
@@ -46,7 +44,7 @@ function Ranking() {
     return (
         <div className="ranking-wrapper">
             <h1 className="h1">Ranking</h1>
-            <div className="select-wrapper">
+            <div className="ranking-select-wrapper">
                 <select
                     className="select"
                     value={category}
