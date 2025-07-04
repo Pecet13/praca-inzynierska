@@ -7,14 +7,27 @@ import "../styles/Home.css";
 import "../styles/Button.css";
 
 function Home() {
+    const [productTypes, setProductTypes] = useState([]);
     const [products, setProducts] = useState([]);
+    const [productType, setProductType] = useState(0);
     const [search, setSearch] = useState("");
     const { isLoggedIn } = useContext(AuthContext);
     const navigate = useNavigate();
 
     useEffect(() => {
+        getProductsTypes();
         getProducts();
     }, []);
+
+    const getProductsTypes = () => {
+        api.get("/api/product-types/")
+            .then((res) => {
+                setProductTypes(res.data);
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    };
 
     const getProducts = () => {
         api.get("/api/products/")
@@ -30,19 +43,40 @@ function Home() {
         setSearch(e.target.value);
     };
 
-    const filteredProducts = products.filter((product) =>
+    const base =
+        productType === 0
+            ? products
+            : products.filter(
+                  (product) => product.product_type === productType
+              );
+
+    const filteredProducts = base.filter((product) =>
         product.name.toLowerCase().includes(search.toLowerCase())
     );
 
     return (
         <div className="home-wrapper">
-            <input
-                type="text"
-                className="search-bar"
-                value={search}
-                onChange={handleSearch}
-                placeholder="Search"
-            ></input>
+            <div className="home-header">
+                <select
+                    className="select"
+                    value={productType}
+                    onChange={(e) => setProductType(Number(e.target.value))}
+                >
+                    <option value="0">All products</option>
+                    {productTypes.map((pt) => (
+                        <option key={pt.id} value={pt.id}>
+                            {pt.name}
+                        </option>
+                    ))}
+                </select>
+                <input
+                    type="text"
+                    className="search-bar"
+                    value={search}
+                    onChange={handleSearch}
+                    placeholder="Search"
+                ></input>
+            </div>
             <div className="product-list">
                 {filteredProducts.map((product) => (
                     <div key={product.id} className="product">

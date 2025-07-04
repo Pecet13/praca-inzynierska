@@ -4,14 +4,20 @@ from rest_framework import generics, status
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.exceptions import ValidationError
-from .serializers import UserSerializer, ProductSerializer, CategorySerializer, ComparisonSerializer, RankingSerializer
-from .models import Product, Category, Comparison, Ranking
+from .serializers import UserSerializer, ProductTypeSerializer, ProductSerializer, CategorySerializer, ComparisonSerializer, RankingSerializer
+from .models import ProductType, Product, Category, Comparison, Ranking
 from .services import user_path_exists
 
 
 class CreateUserView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = [AllowAny]
+
+
+class ProductTypeListView(generics.ListAPIView):
+    queryset = ProductType.objects.all()
+    serializer_class = ProductTypeSerializer
     permission_classes = [AllowAny]
 
 
@@ -54,6 +60,10 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
         for item in serializer.validated_data:
             category = item['category']
             product2 = item['product2']
+            if product1.product_type != product2.product_type:
+                raise ValidationError(f'Product {product2.name} does not belong to the same product type as {product1.name}.')
+            if category.product_type != product1.product_type:
+                raise ValidationError(f'Category {category.name} does not belong to the same product type as {product1.name}.')
             comparison_key = (category.id, product2.id)
             if comparison_key in seen_comparisons:
                 raise ValidationError(f'Duplicate comparison with {product2.name} in category {category.name}.')
@@ -81,8 +91,7 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
                     category=item['category'],
                     product1=product1,
                     product2=item['product2'],
-                    result=item['result'],
-                    user_created=True
+                    result=item['result']
                 )
             )
         
@@ -100,7 +109,7 @@ class ReviewListView(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        comparisons = Comparison.objects.filter(user=self.request.user, user_created=True)
+        comparisons = Comparison.objects.filter(user=self.request.user)
         product_ids = comparisons.values_list('product1', flat=True).distinct()
         return Product.objects.filter(id__in=product_ids)
 

@@ -12,6 +12,12 @@
     width: 75%;
 }
 
+.selects {
+    display: flex;
+    width: 100%;
+    gap: 3rem;
+}
+
 .reverse {
     display: flex;
     flex-direction: row;

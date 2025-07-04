@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
-from .models import Product, Category, Comparison, Ranking
+from .models import ProductType, Product, Category, Comparison, Ranking
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -14,24 +14,30 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
 
+class ProductTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductType
+        fields = ['id', 'name']
+
+
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ['id', 'name', 'description', 'image_url']
+        fields = ['id', 'name', 'product_type', 'description', 'image_url']
         extra_kwargs = {'image_url': {'required': False}}
 
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ['id', 'name']
+        fields = ['id', 'name', 'product_type']
 
 
 class ComparisonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comparison
-        fields = ['id', 'user', 'category', 'product1', 'product2', 'result', 'user_created']
-        extra_kwargs = {'user': {'read_only': True}, 'product1': {'read_only': True}, 'user_created': {'read_only': True}}
+        fields = ['id', 'user', 'category', 'product1', 'product2', 'result']
+        extra_kwargs = {'user': {'read_only': True}, 'product1': {'read_only': True}}
 
 
 class RankingSerializer(serializers.ModelSerializer):

@@ -8,16 +8,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 80%;
     margin-bottom: 2rem;
 }
 
-.select-left,
-.select-right {
+.charts-select-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    width: 100%;
+}
+
+.charts-select {
+    width: 50%;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
 }
 
 .select-text {

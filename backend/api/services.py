@@ -45,10 +45,10 @@ def get_pair_result(category, product1, product2):
 
 def compute_rankings():
     categories = Category.objects.all()
-    products = Product.objects.all()
     rankings = {}
 
     for category in categories:
+        products = Product.objects.filter(product_type=category.product_type)
         rankings[category] = [{'Product': product, 'Score': 0} for product in products]
         
         # Get score for direct comparisons

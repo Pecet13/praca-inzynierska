@@ -16,6 +16,8 @@ import { useNavigate } from "react-router-dom";
 import "../styles/Charts.css";
 
 function Charts() {
+    const [productTypes, setProductTypes] = useState([]);
+    const [productType, setProductType] = useState(0);
     const [rankings, setRankings] = useState([]);
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
@@ -24,10 +26,21 @@ function Charts() {
     const navigate = useNavigate();
 
     useEffect(() => {
+        getProductsTypes();
         getRankings();
         getCategories();
         getProducts();
     }, []);
+
+    const getProductsTypes = () => {
+        api.get("/api/product-types/")
+            .then((res) => {
+                setProductTypes(res.data);
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    };
 
     const getRankings = () => {
         api.get("/api/rankings/")
@@ -47,6 +60,12 @@ function Charts() {
             .catch((err) => {
                 console.error(err);
             });
+        setCategoryX(
+            categories.filter((cat) => cat.product_type === productType)[0]?.id || 1
+        );
+        setCategoryY(
+            categories.filter((cat) => cat.product_type === productType)[0]?.id || 1
+        );
     };
 
     const getProducts = () => {
@@ -87,12 +106,34 @@ function Charts() {
         <div className="charts-wrapper">
             <h1 className="h1">Charts</h1>
             <div className="charts-select-wrapper">
-                <div className="select-left">
+                <div className="charts-select-container">
+                    <select
+                        className="charts-select"
+                        value={productType}
+                        onChange={(e) => {
+                            setProductType(Number(e.target.value));
+                            setCategories(
+                                categories.filter(
+                                    (cat) => cat.product_type === Number(e.target.value)
+                                )
+                            );
+                            setCategoryX(categories[0]);
+                            setCategoryY(categories[0]);
+                        }}
+                    >
+                        {productTypes.map((pt) => (
+                            <option key={pt.id} value={pt.id}>
+                                {pt.name}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+                <div className="charts-select-container">
                     <label htmlFor="select-x" className="select-text">
                         X-Axis
                     </label>
                     <select
-                        className="select"
+                        className="charts-select"
                         id="select-x"
                         value={categoryX}
                         onChange={(e) => setCategoryX(Number(e.target.value))}
@@ -104,12 +145,12 @@ function Charts() {
                         ))}
                     </select>
                 </div>
-                <div className="select-right">
+                <div className="charts-select-container">
                     <label htmlFor="select-y" className="select-text">
                         Y-Axis
                     </label>
                     <select
-                        className="select"
+                        className="charts-select"
                         id="select-y"
                         value={categoryY}
                         onChange={(e) => setCategoryY(Number(e.target.value))}

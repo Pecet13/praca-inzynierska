@@ -5,15 +5,28 @@ import { Link } from "react-router-dom";
 import "../styles/Ranking.css";
 
 function Ranking() {
+    const [productTypes, setProductTypes] = useState([]);
+    const [productType, setProductType] = useState(0);
     const [rankings, setRankings] = useState([]);
     const [categories, setCategories] = useState([]);
     const [category, setCategory] = useState(1);
     const [reverse, setReverse] = useState(false);
 
     useEffect(() => {
+        getProductsTypes();
         getRankings();
         getCategories();
     }, []);
+
+    const getProductsTypes = () => {
+        api.get("/api/product-types/")
+            .then((res) => {
+                setProductTypes(res.data);
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    };
 
     const getRankings = () => {
         api.get("/api/rankings/")
@@ -33,6 +46,9 @@ function Ranking() {
             .catch((err) => {
                 console.error(err);
             });
+        setCategory(
+            categories.filter((cat) => cat.product_type === productType)[0]?.id || 1
+        );
     };
 
     const base = rankings
@@ -45,17 +61,38 @@ function Ranking() {
         <div className="ranking-wrapper">
             <h1 className="h1">Ranking</h1>
             <div className="ranking-select-wrapper">
-                <select
-                    className="select"
-                    value={category}
-                    onChange={(e) => setCategory(Number(e.target.value))}
-                >
-                    {categories.map((cat) => (
-                        <option key={cat.id} value={cat.id}>
-                            {cat.name}
-                        </option>
-                    ))}
-                </select>
+                <div className="selects">
+                    <select
+                        className="select"
+                        value={productType}
+                        onChange={(e) => {
+                            setProductType(Number(e.target.value));
+                            setCategories(
+                                categories.filter(
+                                    (cat) => cat.product_type === Number(e.target.value)
+                                )
+                            );
+                            setCategory(categories[0]);
+                        }}
+                    >
+                        {productTypes.map((pt) => (
+                            <option key={pt.id} value={pt.id}>
+                                {pt.name}
+                            </option>
+                        ))}
+                    </select>
+                    <select
+                        className="select"
+                        value={category}
+                        onChange={(e) => setCategory(Number(e.target.value))}
+                    >
+                        {categories.map((cat) => (
+                            <option key={cat.id} value={cat.id}>
+                                {cat.name}
+                            </option>
+                        ))}
+                    </select>
+                </div>
                 <label className="reverse">
                     <span className="reverse-text">Reverse </span>
                     <input

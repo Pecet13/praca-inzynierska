@@ -2,8 +2,16 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+class ProductType(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
 class Product(models.Model):
     name = models.CharField(max_length=100)
+    product_type = models.ForeignKey(ProductType, on_delete=models.CASCADE)
     description = models.TextField()
     image_url = models.URLField(null=True, blank=True)
 
@@ -13,6 +21,7 @@ class Product(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
+    product_type = models.ForeignKey(ProductType, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
@@ -24,7 +33,6 @@ class Comparison(models.Model):
     product1 = models.ForeignKey(Product, related_name='product1', on_delete=models.CASCADE)
     product2 = models.ForeignKey(Product, related_name='product2', on_delete=models.CASCADE)
     result = models.CharField(max_length=100, choices=[('More', 'more'), ('Less', 'less'), ('Equal', 'equal')], default='Equal')
-    user_created = models.BooleanField(default=True)
 
     def __str__(self):
         res = f"Comparison in category: {self.category.name}, "
