@@ -34,7 +34,7 @@ function MyReviews() {
             .catch((err) => {
                 console.error(err);
             });
-    }
+    };
 
     return (
         <div className="home-wrapper">
@@ -43,15 +43,17 @@ function MyReviews() {
                 {products.map((product) => (
                     <div key={product.id} className="product">
                         <div className="product-left">
-                            <img
-                                className="product-image"
-                                src={
-                                    product.image_url
-                                        ? product.image_url
-                                        : placeholder
-                                }
-                                alt={product.name}
-                            />
+                            <div className="product-image-container">
+                                <img
+                                    className="product-image"
+                                    src={
+                                        product.image_url
+                                            ? product.image_url
+                                            : placeholder
+                                    }
+                                    alt={product.name}
+                                />
+                            </div>
                             <Link
                                 to={`/products/${product.id}`}
                                 className="product-name"
@@ -60,28 +62,28 @@ function MyReviews() {
                             </Link>
                         </div>
                         <div className="product-right">
-                                <div>
-                                    <button
-                                        className="button button-primary"
-                                        type="button"
-                                        onClick={() => {
-                                            navigate(
-                                                `/products/${product.id}/review`
-                                            );
-                                        }}
-                                    >
-                                        Edit review
-                                    </button>
-                                    <button
-                                        className="button button-secondary"
-                                        type="button"
-                                        onClick={() => {
-                                            deleteReview(product.id);
-                                        }}
-                                    >
-                                        Delete review
-                                    </button>
-                                </div>
+                            <div>
+                                <button
+                                    className="button button-primary"
+                                    type="button"
+                                    onClick={() => {
+                                        navigate(
+                                            `/products/${product.id}/review`
+                                        );
+                                    }}
+                                >
+                                    Edit review
+                                </button>
+                                <button
+                                    className="button button-secondary"
+                                    type="button"
+                                    onClick={() => {
+                                        deleteReview(product.id);
+                                    }}
+                                >
+                                    Delete review
+                                </button>
+                            </div>
                         </div>
                     </div>
                 ))}

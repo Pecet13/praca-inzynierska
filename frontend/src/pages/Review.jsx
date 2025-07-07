@@ -7,6 +7,7 @@ import "../styles/Button.css";
 function Review() {
     const { id } = useParams();
     const [productName, setProductName] = useState("");
+    const [productType, setProductType] = useState(0);
     const [categories, setCategories] = useState([]);
     const [products, setProducts] = useState([]);
     const [rows, setRows] = useState([
@@ -25,6 +26,7 @@ function Review() {
         api.get(`/api/products/${id}/`)
             .then((res) => {
                 setProductName(res.data.name);
+                setProductType(res.data.product_type);
             })
             .catch((err) => {
                 console.error(err);
@@ -102,8 +104,11 @@ function Review() {
             .catch((err) => {
                 console.error(err);
                 let msg = "Error submitting review.";
-                if (Array.isArray(err.response.data) && err.response.data.length === 1) {
-                    msg = err.response.data[0]
+                if (
+                    Array.isArray(err.response.data) &&
+                    err.response.data.length === 1
+                ) {
+                    msg = err.response.data[0];
                 }
                 alert(msg);
             });
@@ -127,11 +132,19 @@ function Review() {
                             }
                         >
                             <option value="">Select Category</option>
-                            {categories.map((category) => (
-                                <option key={category.id} value={category.id}>
-                                    {category.name}
-                                </option>
-                            ))}
+                            {categories
+                                .filter(
+                                    (category) =>
+                                        category.product_type === productType
+                                )
+                                .map((category) => (
+                                    <option
+                                        key={category.id}
+                                        value={category.id}
+                                    >
+                                        {category.name}
+                                    </option>
+                                ))}
                         </select>
                         <select
                             className="select"
@@ -152,11 +165,16 @@ function Review() {
                             }
                         >
                             <option value="">Select Product</option>
-                            {products.map((product) => (
-                                <option key={product.id} value={product.id}>
-                                    {product.name}
-                                </option>
-                            ))}
+                            {products
+                                .filter(
+                                    (product) =>
+                                        product.product_type === productType
+                                )
+                                .map((product) => (
+                                    <option key={product.id} value={product.id}>
+                                        {product.name}
+                                    </option>
+                                ))}
                         </select>
                         {rows.length > 1 && (
                             <button

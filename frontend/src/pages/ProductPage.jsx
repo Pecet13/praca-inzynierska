@@ -9,12 +9,24 @@ import "../styles/Button.css";
 function ProductPage() {
     const { id } = useParams();
     const { isLoggedIn } = useContext(AuthContext);
+    const [productTypes, setProductTypes] = useState([]);
     const [product, setProduct] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() => {
+        getProductsTypes();
         getProduct();
     }, [id]);
+
+    const getProductsTypes = () => {
+        api.get("/api/product-types/")
+            .then((res) => {
+                setProductTypes(res.data);
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    };
 
     const getProduct = () => {
         api.get(`/api/products/${id}/`)
@@ -29,10 +41,14 @@ function ProductPage() {
     // Don't render if product is null
     if (!product) return null;
 
+    const productType = productTypes.find(
+        (type) => type.id === product.product_type
+    );
+
     return (
         <div className="product-wrapper">
             <h1>{product.name}</h1>
-            <h2>Product type: {product.product_type}</h2>
+            <h2>Product type: {productType.name}</h2>
             <div className="product-details">
                 <div className="product-details-image-container">
                     <img
