@@ -6,10 +6,11 @@ import "../styles/Ranking.css";
 
 function Ranking() {
     const [productTypes, setProductTypes] = useState([]);
-    const [productType, setProductType] = useState(0);
+    const [productType, setProductType] = useState(1);
     const [rankings, setRankings] = useState([]);
     const [categories, setCategories] = useState([]);
-    const [category, setCategory] = useState(1);
+    const [filteredCategories, setFilteredCategories] = useState([]);
+    const [category, setCategory] = useState(0);
     const [reverse, setReverse] = useState(false);
 
     useEffect(() => {
@@ -17,6 +18,15 @@ function Ranking() {
         getRankings();
         getCategories();
     }, []);
+
+    useEffect(() => {
+        const filtered =
+            productType === 0
+                ? categories
+                : categories.filter((cat) => cat.product_type === productType);
+        setFilteredCategories(filtered);
+        setCategory(filtered[0]?.id || 0);
+    }, [productType, categories]);
 
     const getProductsTypes = () => {
         api.get("/api/product-types/")
@@ -46,10 +56,6 @@ function Ranking() {
             .catch((err) => {
                 console.error(err);
             });
-        setCategory(
-            categories.filter((cat) => cat.product_type === productType)[0]
-                ?.id || 1
-        );
     };
 
     const base = rankings
@@ -68,14 +74,6 @@ function Ranking() {
                         value={productType}
                         onChange={(e) => {
                             setProductType(Number(e.target.value));
-                            setCategories(
-                                categories.filter(
-                                    (cat) =>
-                                        cat.product_type.id ===
-                                        Number(e.target.value)
-                                )
-                            );
-                            setCategory(categories[0]);
                         }}
                     >
                         {productTypes.map((pt) => (
@@ -89,7 +87,7 @@ function Ranking() {
                         value={category}
                         onChange={(e) => setCategory(Number(e.target.value))}
                     >
-                        {categories.map((cat) => (
+                        {filteredCategories.map((cat) => (
                             <option key={cat.id} value={cat.id}>
                                 {cat.name}
                             </option>

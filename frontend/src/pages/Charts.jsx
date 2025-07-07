@@ -17,12 +17,13 @@ import "../styles/Charts.css";
 
 function Charts() {
     const [productTypes, setProductTypes] = useState([]);
-    const [productType, setProductType] = useState(0);
+    const [productType, setProductType] = useState(1);
     const [rankings, setRankings] = useState([]);
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
-    const [categoryX, setCategoryX] = useState(1);
-    const [categoryY, setCategoryY] = useState(1);
+    const [filteredCategories, setFilteredCategories] = useState([]);
+    const [categoryX, setCategoryX] = useState(0);
+    const [categoryY, setCategoryY] = useState(0);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -31,6 +32,16 @@ function Charts() {
         getCategories();
         getProducts();
     }, []);
+
+    useEffect(() => {
+        const filtered =
+            productType === 0
+                ? categories
+                : categories.filter((cat) => cat.product_type === productType);
+        setFilteredCategories(filtered);
+        setCategoryX(filtered[0]?.id || 0);
+        setCategoryY(filtered[0]?.id || 0);
+    }, [productType, categories]);
 
     const getProductsTypes = () => {
         api.get("/api/product-types/")
@@ -60,12 +71,6 @@ function Charts() {
             .catch((err) => {
                 console.error(err);
             });
-        setCategoryX(
-            categories.filter((cat) => cat.product_type === productType)[0]?.id || 1
-        );
-        setCategoryY(
-            categories.filter((cat) => cat.product_type === productType)[0]?.id || 1
-        );
     };
 
     const getProducts = () => {
@@ -112,13 +117,6 @@ function Charts() {
                         value={productType}
                         onChange={(e) => {
                             setProductType(Number(e.target.value));
-                            setCategories(
-                                categories.filter(
-                                    (cat) => cat.product_type === Number(e.target.value)
-                                )
-                            );
-                            setCategoryX(categories[0]);
-                            setCategoryY(categories[0]);
                         }}
                     >
                         {productTypes.map((pt) => (
@@ -138,7 +136,7 @@ function Charts() {
                         value={categoryX}
                         onChange={(e) => setCategoryX(Number(e.target.value))}
                     >
-                        {categories.map((cat) => (
+                        {filteredCategories.map((cat) => (
                             <option key={cat.id} value={cat.id}>
                                 {cat.name}
                             </option>
@@ -155,7 +153,7 @@ function Charts() {
                         value={categoryY}
                         onChange={(e) => setCategoryY(Number(e.target.value))}
                     >
-                        {categories.map((cat) => (
+                        {filteredCategories.map((cat) => (
                             <option key={cat.id} value={cat.id}>
                                 {cat.name}
                             </option>
