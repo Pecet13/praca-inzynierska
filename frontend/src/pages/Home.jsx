@@ -81,15 +81,17 @@ function Home() {
                 {filteredProducts.map((product) => (
                     <div key={product.id} className="product">
                         <div className="product-left">
-                            <img
-                                className="product-image"
-                                src={
-                                    product.image_url
-                                        ? product.image_url
-                                        : placeholder
-                                }
-                                alt={product.name}
-                            />
+                            <div className="product-image-container">
+                                <img
+                                    className="product-image"
+                                    src={
+                                        product.image_url
+                                            ? product.image_url
+                                            : placeholder
+                                    }
+                                    alt={product.name}
+                                />
+                            </div>
                             <Link
                                 to={`/products/${product.id}`}
                                 className="product-name"

@@ -47,7 +47,8 @@ function Ranking() {
                 console.error(err);
             });
         setCategory(
-            categories.filter((cat) => cat.product_type === productType)[0]?.id || 1
+            categories.filter((cat) => cat.product_type === productType)[0]
+                ?.id || 1
         );
     };
 
@@ -69,7 +70,9 @@ function Ranking() {
                             setProductType(Number(e.target.value));
                             setCategories(
                                 categories.filter(
-                                    (cat) => cat.product_type === Number(e.target.value)
+                                    (cat) =>
+                                        cat.product_type.id ===
+                                        Number(e.target.value)
                                 )
                             );
                             setCategory(categories[0]);
@@ -107,15 +110,17 @@ function Ranking() {
                     <div key={item.id} className="product">
                         <div className="product-left">
                             <p className="product-rank">{item.rank}.</p>
-                            <img
-                                className="product-image"
-                                src={
-                                    item.product.image_url
-                                        ? item.product.image_url
-                                        : placeholder
-                                }
-                                alt={item.product.name}
-                            />
+                            <div className="product-image-container">
+                                <img
+                                    className="product-image"
+                                    src={
+                                        item.product.image_url
+                                            ? item.product.image_url
+                                            : placeholder
+                                    }
+                                    alt={item.product.name}
+                                />
+                            </div>
                             <Link
                                 to={`/products/${item.product.id}`}
                                 className="product-name"

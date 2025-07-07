@@ -12,17 +12,26 @@
     gap: 3rem;
 }
 
-.product-details-image {
+.product-details-image-container {
     width: 400px;
     height: 400px;
+    display: flex;
+    justify-items: center;
     border-radius: 10px;
     margin-right: 0.5rem;
+}
+
+.product-details-image {
+    max-width: 400px;
+    max-height: 400px;
+    margin: auto;
 }
 
 .product-description {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    width: auto;
+    white-space: pre-wrap;
     overflow-y: auto;
 }
 

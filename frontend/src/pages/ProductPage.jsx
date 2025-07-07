@@ -32,13 +32,17 @@ function ProductPage() {
     return (
         <div className="product-wrapper">
             <h1>{product.name}</h1>
-            <h2>{product.product_type.name}</h2>
+            <h2>Product type: {product.product_type}</h2>
             <div className="product-details">
-                <img
-                    className="product-details-image"
-                    src={product.image_url ? product.image_url : placeholder}
-                    alt={product.name}
-                />
+                <div className="product-details-image-container">
+                    <img
+                        className="product-details-image"
+                        src={
+                            product.image_url ? product.image_url : placeholder
+                        }
+                        alt={product.name}
+                    />
+                </div>
                 <div className="product-description">
                     <h2>Description</h2>
                     <p>{product.description}</p>

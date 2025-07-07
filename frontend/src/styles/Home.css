@@ -48,11 +48,19 @@
     margin-right: 0.5rem;
 }
 
-.product-image {
+.product-image-container {
     width: 4rem;
     height: 4rem;
+    display: flex;
+    justify-items: center;
     border-radius: 10px;
     margin-right: 1rem;
+}
+
+.product-image {
+    max-width: 4rem;
+    max-height: 4rem;
+    margin: auto;
 }
 
 .product-name {

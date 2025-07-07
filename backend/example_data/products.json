@@ -3,180 +3,240 @@
         "model": "api.product",
         "pk": 1,
         "fields": {
-            "name": "Ethiopia Yirgacheffe",
-            "description": "Floral and citrus notes with a bright acidity.",
-            "image_url": null
+            "name": "Illy Classico 100% Arabica",
+            "product_type": 1,
+            "description": "Quantity: 250g\nPackaging: Blechdose, Steel-tin, fr:boîte en métal\nBrands: Illy\nOrigin of ingredients: Italy",
+            "image_url": "https://images.openfoodfacts.org/images/products/800/375/390/0438/front_en.11.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 2,
         "fields": {
-            "name": "Colombia Supremo",
-            "description": "Full-bodied coffee with caramel and chocolate flavors.",
-            "image_url": null
+            "name": "CARTE NOIRE",
+            "product_type": 1,
+            "description": "Common name: Café moulu\nQuantity: 250 g\nPackaging: Metal, Recyclable Metals, Aluminium, Vacuum-packed, fr:Sachet en plastique\nBrands: Carte Noire, Lavazza",
+            "image_url": "https://images.openfoodfacts.org/images/products/800/007/020/0289/front_fr.86.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 3,
         "fields": {
-            "name": "Brazil Santos",
-            "description": "Nutty aroma and a smooth, mild flavor profile.",
-            "image_url": null
+            "name": "Ricoré Original Café & Chicorée",
+            "product_type": 1,
+            "description": "Common name: Café chicorée solubles et fibre de chicorée\nQuantity: 200 g\nPackaging: fr:Aluminium + plastique\nBrands: Nestlé",
+            "image_url": "https://images.openfoodfacts.org/images/products/761/303/527/2903/front_fr.112.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 4,
         "fields": {
-            "name": "Kenya AA",
-            "description": "Bright acidity and fruity, wine-like flavors.",
-            "image_url": null
+            "name": "Chicoree nature - Carrefour",
+            "product_type": 1,
+            "description": "Common name: Chicorée soluble\nQuantity: 100 g\nBrands: Carrefour, Carrefour Classic",
+            "image_url": "https://images.openfoodfacts.org/images/products/356/007/126/3577/front_fr.9.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 5,
         "fields": {
-            "name": "Sumatra Mandheling",
-            "description": "Earthy, low-acid coffee with rich body.",
-            "image_url": null
+            "name": "Lavazza Qualità Oro",
+            "product_type": 1,
+            "description": "Common name: roasted ground coffee.\nQuantity: 250 g\nPackaging: Sealed\nBrands: Lavazza\nOrigin of ingredients: Italy",
+            "image_url": "https://images.openfoodfacts.org/images/products/800/007/001/2783/front_en.18.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 6,
         "fields": {
-            "name": "Guatemala Antigua",
-            "description": "Complex flavors with cocoa and spice notes.",
-            "image_url": null
+            "name": "Nescafé Classic",
+            "product_type": 1,
+            "description": "Common name: Caffè solubile\nQuantity: 100 g\nPackaging: Plastic, Glass\nBrands: Nescafé",
+            "image_url": "https://images.openfoodfacts.org/images/products/000/008/000/0822/front_it.23.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 7,
         "fields": {
-            "name": "Costa Rica Tarrazú",
-            "description": "Crisp acidity with hints of tropical fruit.",
-            "image_url": null
+            "name": "Jacobs Cronat Gold Instant Coffee",
+            "product_type": 1,
+            "description": "Common name: Kawa rozpuszczalna liofilizowana Jacobs Cronat Gold\nQuantity: 200 g\nPackaging: Glass, Clear Glass\nBrands: Jacobs",
+            "image_url": "https://images.openfoodfacts.org/images/products/871/100/051/3767/front_pl.16.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 8,
         "fields": {
-            "name": "Tanzania Peaberry",
-            "description": "Bright and vibrant, with fruity overtones.",
-            "image_url": null
+            "name": "Nescafé Gold Blend",
+            "product_type": 1,
+            "description": "Common name: Freeze-dried soluble coffee with finely ground roasted coffee\nQuantity: 100g\nPackaging: Glass\nBrands: Nescafé",
+            "image_url": "https://images.openfoodfacts.org/images/products/761/303/606/9816/front_en.18.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 9,
         "fields": {
-            "name": "Honduras Marcala",
-            "description": "Sweet caramel and nutty flavor profile.",
-            "image_url": null
+            "name": "Illy Classic Roast Ground Coffee",
+            "product_type": 1,
+            "description": "Quantity: 125 g\nPackaging: Aluminium-tin\nBrands: Illy",
+            "image_url": "https://images.openfoodfacts.org/images/products/800/375/390/0704/front_fr.8.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 10,
         "fields": {
-            "name": "Nicaragua Segovia",
-            "description": "Medium body with balanced acidity and cocoa notes.",
-            "image_url": null
+            "name": "Bouillet Café Soluble Natural",
+            "product_type": 1,
+            "description": "Common name: Café soluble natural\nQuantity: 100 g\nBrands: Bouillet",
+            "image_url": "https://images.openfoodfacts.org/images/products/843/701/397/2017/front_es.3.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 11,
         "fields": {
-            "name": "Panama Boquete",
-            "description": "Delicate floral aroma and light body.",
-            "image_url": null
+            "name": "Łowicz Dżem Truskawkowy",
+            "product_type": 2,
+            "description": "Quantity: 280g\nPackaging: Glass\nBrands: Łowicz",
+            "image_url": "https://images.openfoodfacts.org/images/products/590/039/700/6744/front_pl.32.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 12,
         "fields": {
-            "name": "Peru Chanchamayo",
-            "description": "Mild flavor with nutty undertones and low acidity.",
-            "image_url": null
+            "name": "Fearne & Rosie Strawberry Jam",
+            "product_type": 2,
+            "description": "Quantity: 310g\nBrands: Fearne & Rosie",
+            "image_url": "https://images.openfoodfacts.org/images/products/506/500/840/2114/front_en.3.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 13,
         "fields": {
-            "name": "India Monsooned Malabar",
-            "description": "Smooth, earthy, and low-acid profile.",
-            "image_url": null
+            "name": "Lidl Simply Strawberry Jam",
+            "product_type": 2,
+            "description": "Quantity: 454g\nBrands: Lidl Simply",
+            "image_url": "https://images.openfoodfacts.org/images/products/405/648/991/7908/front_en.3.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 14,
         "fields": {
-            "name": "Jamaica Blue Mountain",
-            "description": "Mild flavor, very smooth, with little bitterness.",
-            "image_url": null
+            "name": "Welch's Natural Strawberry Spread",
+            "product_type": 2,
+            "description": "Quantity: 765 g\nPackaging: Plastic\nBrands: Welch's\nBrand owner: Welch Foods Inc",
+            "image_url": "https://images.openfoodfacts.org/images/products/004/180/050/1274/front_en.29.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 15,
         "fields": {
-            "name": "Rwanda Bourbon",
-            "description": "Sweet flavor with notes of red berries and honey.",
-            "image_url": null
+            "name": "Lamponi - Hero",
+            "product_type": 2,
+            "description": "Quantity: 280g\nPackaging: it:Tappo ACCAIO O METALLO, it:Vaso VETRO\nBrands: Hero",
+            "image_url": "https://images.openfoodfacts.org/images/products/800/008/000/4389/front_it.25.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 16,
         "fields": {
-            "name": "Yemen Mocha",
-            "description": "Rich, winey acidity with deep chocolate notes.",
-            "image_url": null
+            "name": "Tesco Strawberry Seedless Jam",
+            "product_type": 2,
+            "description": "Quantity: 454 g\nPackaging: Glass, Jar\nBrands: Tesco",
+            "image_url": "https://images.openfoodfacts.org/images/products/505/775/343/7909/front_en.19.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 17,
         "fields": {
-            "name": "El Salvador Pacamara",
-            "description": "Sweet and fruity with floral aromatics.",
-            "image_url": null
+            "name": "Pringles Sour Cream & Onion",
+            "product_type": 3,
+            "description": "Quantity: 165g\nPackaging: Tube, Card-tube, Container, Pp-lid\nBrands: Pringles",
+            "image_url": "https://images.openfoodfacts.org/images/products/505/399/012/7740/front_en.87.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 18,
         "fields": {
-            "name": "Papua New Guinea",
-            "description": "Earthy flavors with mild acidity and fruity aroma.",
-            "image_url": null
+            "name": "Lay's Paprika",
+            "product_type": 3,
+            "description": "Quantity: 175 g\nPackaging: Plastic, Bag\nBrands: Lay's",
+            "image_url": "https://images.openfoodfacts.org/images/products/406/080/018/1534/front_de.38.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 19,
         "fields": {
-            "name": "Vietnam Robusta",
-            "description": "Strong and bold with a slightly bitter taste.",
-            "image_url": null
+            "name": "Crunchips WoW Paprika and Sour Cream",
+            "product_type": 3,
+            "description": "Quantity: 110g\nPackaging: Plastic, Pp-polypropylene\nBrands: Lorenz",
+            "image_url": "https://images.openfoodfacts.org/images/products/401/807/782/2018/front_fr.37.400.jpg"
         }
     },
     {
         "model": "api.product",
         "pk": 20,
         "fields": {
-            "name": "Mexico Altura",
-            "description": "Light body with nutty and chocolatey tones.",
-            "image_url": null
+            "name": "Lays's Sour Cream & Onion",
+            "product_type": 3,
+            "description": "Quantity: 175 g\nPackaging: Plastic, Bag\nBrands: Lay's",
+            "image_url": "https://images.openfoodfacts.org/images/products/406/080/018/1565/front_de.41.400.jpg"
+        }
+    },
+    {
+        "model": "api.product",
+        "pk": 21,
+        "fields": {
+            "name": "Wiejskie Ziemniaczki - Masło z Solą",
+            "product_type": 3,
+            "description": "Quantity: 130 g\nBrands: Wiejskie Ziemniaczki",
+            "image_url": "https://images.openfoodfacts.org/images/products/200/000/014/7552/front_pl.9.400.jpg"
+        }
+    },
+    {
+        "model": "api.product",
+        "pk": 22,
+        "fields": {
+            "name": "Chipsletten Hot Paprika",
+            "product_type": 3,
+            "description": "Quantity: 170 g\nPackaging: Can\nBrands: Lorenz",
+            "image_url": "https://images.openfoodfacts.org/images/products/401/807/761/3296/front_de.13.400.jpg"
+        }
+    },
+    {
+        "model": "api.product",
+        "pk": 23,
+        "fields": {
+            "name": "Pringles Original",
+            "product_type": 3,
+            "description": "Quantity: 165g\nPackaging: Tube, Card-tube, Container, Pp-lid\nBrands: Pringles",
+            "image_url": "https://images.openfoodfacts.org/images/products/505/399/012/7726/front_en.68.400.jpg"
+        }
+    },
+    {
+        "model": "api.product",
+        "pk": 24,
+        "fields": {
+            "name": "Pringles Paprika",
+            "product_type": 3,
+            "description": "Quantity: 165g\nPackaging: Tube, Card-tube, Container, Pp-lid\nBrands: Pringles",
+            "image_url": "https://images.openfoodfacts.org/images/products/505/399/016/1669/front_en.141.400.jpg"
         }
     }
 ]
