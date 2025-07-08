@@ -22,6 +22,7 @@ function Charts() {
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
     const [filteredCategories, setFilteredCategories] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([]);
     const [categoryX, setCategoryX] = useState(0);
     const [categoryY, setCategoryY] = useState(0);
     const navigate = useNavigate();
@@ -34,14 +35,19 @@ function Charts() {
     }, []);
 
     useEffect(() => {
-        const filtered =
+        const filteredCats =
             productType === 0
                 ? categories
                 : categories.filter((cat) => cat.product_type === productType);
-        setFilteredCategories(filtered);
-        setCategoryX(filtered[0]?.id || 0);
-        setCategoryY(filtered[0]?.id || 0);
-    }, [productType, categories]);
+        setFilteredCategories(filteredCats);
+        setCategoryX(filteredCats[0]?.id || 0);
+        setCategoryY(filteredCats[0]?.id || 0);
+        const filteredProds =
+            productType === 0
+                ? products
+                : products.filter((prod) => prod.product_type === productType);
+        setFilteredProducts(filteredProds);
+    }, [productType, categories, products]);
 
     const getProductsTypes = () => {
         api.get("/api/product-types/")
@@ -96,7 +102,7 @@ function Charts() {
     let categoryYName =
         categories.find((cat) => cat.id === categoryY)?.name || "Y-Axis";
 
-    const data = products.map((product) => {
+    const data = filteredProducts.map((product) => {
         const rankX = rankingX.find((item) => item.product.id === product.id);
         const rankY = rankingY.find((item) => item.product.id === product.id);
         return {
@@ -161,10 +167,10 @@ function Charts() {
                     </select>
                 </div>
             </div>
-            <ResponsiveContainer width="75%" height={600}>
+            <ResponsiveContainer width="75%" height={700}>
                 <ScatterChart
                     margin={{
-                        top: 50,
+                        top: 100,
                         right: 50,
                         bottom: 50,
                         left: 50,

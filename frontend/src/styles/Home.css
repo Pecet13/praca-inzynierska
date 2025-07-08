@@ -53,13 +53,13 @@
     height: 4rem;
     display: flex;
     justify-items: center;
-    border-radius: 10px;
     margin-right: 1rem;
 }
 
 .product-image {
     max-width: 4rem;
     max-height: 4rem;
+    border-radius: 5px;
     margin: auto;
 }
 
