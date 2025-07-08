@@ -1,0 +1,3372 @@
+[
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 1,
+            "product2": 2,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 1,
+            "product2": 3,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 1,
+            "product2": 4,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 1,
+            "product2": 5,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 1,
+            "product2": 6,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 1,
+            "product2": 7,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 1,
+            "product2": 8,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 1,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 1,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 2,
+            "product2": 3,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 2,
+            "product2": 4,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 2,
+            "product2": 5,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 2,
+            "product2": 6,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 2,
+            "product2": 7,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 2,
+            "product2": 8,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 2,
+            "product2": 9,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 2,
+            "product2": 10,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 3,
+            "product2": 4,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 3,
+            "product2": 5,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 3,
+            "product2": 6,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 3,
+            "product2": 7,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 3,
+            "product2": 8,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 3,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 3,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 4,
+            "product2": 5,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 4,
+            "product2": 6,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 4,
+            "product2": 7,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 4,
+            "product2": 8,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 4,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 4,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 5,
+            "product2": 6,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 5,
+            "product2": 7,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 5,
+            "product2": 8,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 5,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 5,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 6,
+            "product2": 7,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 6,
+            "product2": 8,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 6,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 6,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 7,
+            "product2": 8,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 7,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 7,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 8,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 8,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 1,
+            "product1": 9,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 1,
+            "product2": 2,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 1,
+            "product2": 3,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 1,
+            "product2": 4,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 1,
+            "product2": 5,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 1,
+            "product2": 6,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 1,
+            "product2": 7,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 1,
+            "product2": 8,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 1,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 1,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 2,
+            "product2": 3,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 2,
+            "product2": 4,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 2,
+            "product2": 5,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 2,
+            "product2": 6,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 2,
+            "product2": 7,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 2,
+            "product2": 8,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 2,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 2,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 3,
+            "product2": 4,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 3,
+            "product2": 5,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 3,
+            "product2": 6,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 3,
+            "product2": 7,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 3,
+            "product2": 8,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 3,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 3,
+            "product2": 10,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 4,
+            "product2": 5,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 4,
+            "product2": 6,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 4,
+            "product2": 7,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 4,
+            "product2": 8,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 4,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 4,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 5,
+            "product2": 6,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 5,
+            "product2": 7,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 5,
+            "product2": 8,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 5,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 5,
+            "product2": 10,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 6,
+            "product2": 7,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 6,
+            "product2": 8,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 6,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 6,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 7,
+            "product2": 8,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 7,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 7,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 8,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 8,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 2,
+            "product1": 9,
+            "product2": 10,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 1,
+            "product2": 2,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 1,
+            "product2": 3,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 1,
+            "product2": 4,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 1,
+            "product2": 5,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 1,
+            "product2": 6,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 1,
+            "product2": 7,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 1,
+            "product2": 8,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 1,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 1,
+            "product2": 10,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 2,
+            "product2": 3,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 2,
+            "product2": 4,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 2,
+            "product2": 5,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 2,
+            "product2": 6,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 2,
+            "product2": 7,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 2,
+            "product2": 8,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 2,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 2,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 3,
+            "product2": 4,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 3,
+            "product2": 5,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 3,
+            "product2": 6,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 3,
+            "product2": 7,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 3,
+            "product2": 8,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 3,
+            "product2": 9,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 3,
+            "product2": 10,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 4,
+            "product2": 5,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 4,
+            "product2": 6,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 4,
+            "product2": 7,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 4,
+            "product2": 8,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 4,
+            "product2": 9,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 4,
+            "product2": 10,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 5,
+            "product2": 6,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 5,
+            "product2": 7,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 5,
+            "product2": 8,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 5,
+            "product2": 9,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 5,
+            "product2": 10,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 6,
+            "product2": 7,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 6,
+            "product2": 8,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 6,
+            "product2": 9,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 6,
+            "product2": 10,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 7,
+            "product2": 8,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 7,
+            "product2": 9,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 7,
+            "product2": 10,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 8,
+            "product2": 9,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 8,
+            "product2": 10,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 3,
+            "product1": 9,
+            "product2": 10,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 1,
+            "product2": 2,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 1,
+            "product2": 3,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 1,
+            "product2": 4,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 1,
+            "product2": 5,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 1,
+            "product2": 6,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 1,
+            "product2": 7,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 1,
+            "product2": 8,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 1,
+            "product2": 9,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 1,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 2,
+            "product2": 3,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 2,
+            "product2": 4,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 2,
+            "product2": 5,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 2,
+            "product2": 6,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 2,
+            "product2": 7,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 2,
+            "product2": 8,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 2,
+            "product2": 9,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 2,
+            "product2": 10,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 3,
+            "product2": 4,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 3,
+            "product2": 5,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 3,
+            "product2": 6,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 3,
+            "product2": 7,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 3,
+            "product2": 8,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 3,
+            "product2": 9,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 3,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 4,
+            "product2": 5,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 4,
+            "product2": 6,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 4,
+            "product2": 7,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 4,
+            "product2": 8,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 4,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 4,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 5,
+            "product2": 6,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 5,
+            "product2": 7,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 5,
+            "product2": 8,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 5,
+            "product2": 9,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 5,
+            "product2": 10,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 6,
+            "product2": 7,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 6,
+            "product2": 8,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 6,
+            "product2": 9,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 6,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 7,
+            "product2": 8,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 7,
+            "product2": 9,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 7,
+            "product2": 10,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 8,
+            "product2": 9,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 8,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 4,
+            "product1": 9,
+            "product2": 10,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 5,
+            "product1": 11,
+            "product2": 12,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 5,
+            "product1": 11,
+            "product2": 13,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 5,
+            "product1": 11,
+            "product2": 14,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 5,
+            "product1": 11,
+            "product2": 15,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 5,
+            "product1": 11,
+            "product2": 16,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 5,
+            "product1": 12,
+            "product2": 13,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 5,
+            "product1": 12,
+            "product2": 14,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 5,
+            "product1": 12,
+            "product2": 15,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 5,
+            "product1": 12,
+            "product2": 16,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 5,
+            "product1": 13,
+            "product2": 14,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 5,
+            "product1": 13,
+            "product2": 15,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 5,
+            "product1": 13,
+            "product2": 16,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 5,
+            "product1": 14,
+            "product2": 15,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 5,
+            "product1": 14,
+            "product2": 16,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 5,
+            "product1": 15,
+            "product2": 16,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 6,
+            "product1": 11,
+            "product2": 12,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 6,
+            "product1": 11,
+            "product2": 13,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 6,
+            "product1": 11,
+            "product2": 14,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 6,
+            "product1": 11,
+            "product2": 15,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 6,
+            "product1": 11,
+            "product2": 16,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 6,
+            "product1": 12,
+            "product2": 13,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 6,
+            "product1": 12,
+            "product2": 14,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 6,
+            "product1": 12,
+            "product2": 15,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 6,
+            "product1": 12,
+            "product2": 16,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 6,
+            "product1": 13,
+            "product2": 14,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 6,
+            "product1": 13,
+            "product2": 15,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 6,
+            "product1": 13,
+            "product2": 16,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 6,
+            "product1": 14,
+            "product2": 15,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 6,
+            "product1": 14,
+            "product2": 16,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 6,
+            "product1": 15,
+            "product2": 16,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 7,
+            "product1": 11,
+            "product2": 12,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 7,
+            "product1": 11,
+            "product2": 13,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 7,
+            "product1": 11,
+            "product2": 14,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 7,
+            "product1": 11,
+            "product2": 15,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 7,
+            "product1": 11,
+            "product2": 16,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 7,
+            "product1": 12,
+            "product2": 13,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 7,
+            "product1": 12,
+            "product2": 14,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 7,
+            "product1": 12,
+            "product2": 15,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 7,
+            "product1": 12,
+            "product2": 16,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 7,
+            "product1": 13,
+            "product2": 14,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 7,
+            "product1": 13,
+            "product2": 15,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 7,
+            "product1": 13,
+            "product2": 16,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 7,
+            "product1": 14,
+            "product2": 15,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 7,
+            "product1": 14,
+            "product2": 16,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 7,
+            "product1": 15,
+            "product2": 16,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 17,
+            "product2": 18,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 17,
+            "product2": 19,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 17,
+            "product2": 20,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 17,
+            "product2": 21,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 17,
+            "product2": 22,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 17,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 17,
+            "product2": 24,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 18,
+            "product2": 19,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 18,
+            "product2": 20,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 18,
+            "product2": 21,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 18,
+            "product2": 22,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 18,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 18,
+            "product2": 24,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 19,
+            "product2": 20,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 19,
+            "product2": 21,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 19,
+            "product2": 22,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 19,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 19,
+            "product2": 24,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 20,
+            "product2": 21,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 20,
+            "product2": 22,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 20,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 20,
+            "product2": 24,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 21,
+            "product2": 22,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 21,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 21,
+            "product2": 24,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 22,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 22,
+            "product2": 24,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 8,
+            "product1": 23,
+            "product2": 24,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 17,
+            "product2": 18,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 17,
+            "product2": 19,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 17,
+            "product2": 20,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 17,
+            "product2": 21,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 17,
+            "product2": 22,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 17,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 17,
+            "product2": 24,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 18,
+            "product2": 19,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 18,
+            "product2": 20,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 18,
+            "product2": 21,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 18,
+            "product2": 22,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 18,
+            "product2": 23,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 18,
+            "product2": 24,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 19,
+            "product2": 20,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 19,
+            "product2": 21,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 19,
+            "product2": 22,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 19,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 19,
+            "product2": 24,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 20,
+            "product2": 21,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 20,
+            "product2": 22,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 20,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 20,
+            "product2": 24,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 21,
+            "product2": 22,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 21,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 21,
+            "product2": 24,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 22,
+            "product2": 23,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 22,
+            "product2": 24,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 9,
+            "product1": 23,
+            "product2": 24,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 17,
+            "product2": 18,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 17,
+            "product2": 19,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 17,
+            "product2": 20,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 17,
+            "product2": 21,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 17,
+            "product2": 22,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 17,
+            "product2": 23,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 17,
+            "product2": 24,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 18,
+            "product2": 19,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 18,
+            "product2": 20,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 18,
+            "product2": 21,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 18,
+            "product2": 22,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 18,
+            "product2": 23,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 18,
+            "product2": 24,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 19,
+            "product2": 20,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 19,
+            "product2": 21,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 19,
+            "product2": 22,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 19,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 19,
+            "product2": 24,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 20,
+            "product2": 21,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 20,
+            "product2": 22,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 20,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 20,
+            "product2": 24,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 21,
+            "product2": 22,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 21,
+            "product2": 23,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 21,
+            "product2": 24,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 22,
+            "product2": 23,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 22,
+            "product2": 24,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 10,
+            "product1": 23,
+            "product2": 24,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 17,
+            "product2": 18,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 17,
+            "product2": 19,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 17,
+            "product2": 20,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 17,
+            "product2": 21,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 17,
+            "product2": 22,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 17,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 17,
+            "product2": 24,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 18,
+            "product2": 19,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 18,
+            "product2": 20,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 18,
+            "product2": 21,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 18,
+            "product2": 22,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 18,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 18,
+            "product2": 24,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 19,
+            "product2": 20,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 19,
+            "product2": 21,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 19,
+            "product2": 22,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 19,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 19,
+            "product2": 24,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 20,
+            "product2": 21,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 20,
+            "product2": 22,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 20,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 20,
+            "product2": 24,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 21,
+            "product2": 22,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 21,
+            "product2": 23,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 21,
+            "product2": 24,
+            "result": "Less"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 22,
+            "product2": 23,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 22,
+            "product2": 24,
+            "result": "More"
+        }
+    },
+    {
+        "model": "api.comparison",
+        "fields": {
+            "user": null,
+            "category": 11,
+            "product1": 23,
+            "product2": 24,
+            "result": "More"
+        }
+    }
+]

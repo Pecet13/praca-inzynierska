@@ -28,7 +28,7 @@ class Category(models.Model):
 
 
 class Comparison(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     product1 = models.ForeignKey(Product, related_name='product1', on_delete=models.CASCADE)
     product2 = models.ForeignKey(Product, related_name='product2', on_delete=models.CASCADE)
