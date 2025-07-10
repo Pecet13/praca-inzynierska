@@ -6,16 +6,24 @@ from api.models import Comparison
 class Command(BaseCommand):
     help = 'Update product rankings based on user comparisons'
 
+    def add_arguments(self, parser):
+        parser.add_argument(
+            '--user_id',
+            type=int,
+            help='ID of the user to check for transitive comparisons (default value is 1)',
+            default=1
+        )
+
     def handle(self, *args, **options):
         try:
-            comparisons = Comparison.objects.filter(user=2)
+            comparisons = Comparison.objects.filter(user=options['user_id'])
             not_transitive = []
             for comparison in comparisons:
                 if comparison.result == 'More':
-                    if user_path_exists(2, comparison.category, comparison.product2.id, comparison.product1.id):
+                    if user_path_exists(options['user_id'], comparison.category, comparison.product2.id, comparison.product1.id):
                         not_transitive.append(comparison)
                 elif comparison.result == 'Less':
-                    if user_path_exists(2, comparison.category, comparison.product1.id, comparison.product2.id):
+                    if user_path_exists(options['user_id'], comparison.category, comparison.product1.id, comparison.product2.id):
                         not_transitive.append(comparison)
             print(f'Checked {comparisons.count()} comparisons.')
             print(f'Not transitive comparisons found: {len(not_transitive)}')

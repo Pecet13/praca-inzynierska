@@ -31,7 +31,8 @@ def user_path_exists(user, category, src_product_id, dest_product_id):
 
 def get_pair_result(category, product1, product2, user=None):
     if user is None:
-        comparisons = Comparison.objects.filter(category=category, product1__in=[product1, product2], product2__in=[product1, product2]).exclude(user__in=[1, 2])
+        ai_users = User.objects.filter(id__in=[1, 2])
+        comparisons = Comparison.objects.filter(category=category, product1__in=[product1, product2], product2__in=[product1, product2]).exclude(user__in=ai_users)
     else:
         comparisons = Comparison.objects.filter(category=category, product1__in=[product1, product2], product2__in=[product1, product2], user=user)
     wins1 = comparisons.filter(Q(product1=product1, result='More') | Q(product2=product1, result='Less')).count()
@@ -119,12 +120,12 @@ def compute_rankings(user=None):
 @transaction.atomic
 def update_rankings():
     users = [None]
+    ai_users = User.objects.filter(id__in=[1, 2])
 
     # Check if rankings for ChatGPT and Gemini exist
-    if not Ranking.objects.filter(user=1).exists():
-        users.append(1)
-    if not Ranking.objects.filter(user=2).exists():
-        users.append(2)
+    for ai_user in ai_users:
+        if not Ranking.objects.filter(user=ai_user).exists():
+            users.append(ai_user.id)
     
     for user in users:
         rankings = compute_rankings(user)
