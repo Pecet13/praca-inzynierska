@@ -1,0 +1,20 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "username": "ChatGPT",
+            "password": "!",
+            "is_active": true
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "username": "Gemini",
+            "password": "!",
+            "is_active": true
+        }
+    }
+]

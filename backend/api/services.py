@@ -1,7 +1,7 @@
 from collections import deque
 from django.db import transaction
 from django.db.models import Q
-from .models import Comparison, Product, Category, Ranking
+from .models import Comparison, Product, Category, Ranking, User
 
 def user_path_exists(user, category, src_product_id, dest_product_id):
     # Build an adjacency list for the comparisons
@@ -29,8 +29,11 @@ def user_path_exists(user, category, src_product_id, dest_product_id):
     return False
 
 
-def get_pair_result(category, product1, product2):
-    comparisons = Comparison.objects.filter(category=category, product1__in=[product1, product2], product2__in=[product1, product2])
+def get_pair_result(category, product1, product2, user=None):
+    if user is None:
+        comparisons = Comparison.objects.filter(category=category, product1__in=[product1, product2], product2__in=[product1, product2]).exclude(user__in=[1, 2])
+    else:
+        comparisons = Comparison.objects.filter(category=category, product1__in=[product1, product2], product2__in=[product1, product2], user=user)
     wins1 = comparisons.filter(Q(product1=product1, result='More') | Q(product2=product1, result='Less')).count()
     wins2 = comparisons.filter(Q(product1=product2, result='More') | Q(product2=product2, result='Less')).count()
 
@@ -43,13 +46,16 @@ def get_pair_result(category, product1, product2):
     return None
 
 
-def compute_rankings():
+def compute_rankings(user=None):
     categories = Category.objects.all()
     rankings = {}
 
+    if user is not None:
+        user = User.objects.get(id=user)
+
     for category in categories:
         products = Product.objects.filter(product_type=category.product_type)
-        rankings[category] = [{'Product': product, 'Score': 0} for product in products]
+        rankings[category] = [{'Product': product, 'Score': 0, 'User': user} for product in products]
         
         # Get score for direct comparisons
         direct = {}
@@ -57,7 +63,7 @@ def compute_rankings():
             for j in range(i + 1, len(products)):
                 product1 = products[i]
                 product2 = products[j]
-                result = get_pair_result(category, product1, product2)
+                result = get_pair_result(category, product1, product2, user)
                 if result == 'Product1':
                     direct [(i, j)] = 1
                 elif result == 'Product2':
@@ -112,15 +118,26 @@ def compute_rankings():
 
 @transaction.atomic
 def update_rankings():
-    rankings = compute_rankings()
-    for category, product_scores in rankings.items():
-        for product_score in product_scores:
-            product = product_score['Product']
-            score = product_score['Score']
-            rank = product_score['Rank']
-            Ranking.objects.update_or_create(
-                category=category,
-                product=product,
-                defaults={'score': score, 'rank': rank}
-            )
+    users = [None]
+
+    # Check if rankings for ChatGPT and Gemini exist
+    if not Ranking.objects.filter(user=1).exists():
+        users.append(1)
+    if not Ranking.objects.filter(user=2).exists():
+        users.append(2)
+    
+    for user in users:
+        rankings = compute_rankings(user)
+        for category, product_scores in rankings.items():
+            for product_score in product_scores:
+                product = product_score['Product']
+                score = product_score['Score']
+                rank = product_score['Rank']
+                user = product_score['User']
+                Ranking.objects.update_or_create(
+                    category=category,
+                    product=product,
+                    user=user,
+                    defaults={'score': score, 'rank': rank}
+                )
     

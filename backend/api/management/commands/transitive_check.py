@@ -8,14 +8,14 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         try:
-            comparisons = Comparison.objects.filter(user=None)
+            comparisons = Comparison.objects.filter(user=2)
             not_transitive = []
             for comparison in comparisons:
                 if comparison.result == 'More':
-                    if user_path_exists(None, comparison.category, comparison.product2.id, comparison.product1.id):
+                    if user_path_exists(2, comparison.category, comparison.product2.id, comparison.product1.id):
                         not_transitive.append(comparison)
                 elif comparison.result == 'Less':
-                    if user_path_exists(None, comparison.category, comparison.product1.id, comparison.product2.id):
+                    if user_path_exists(2, comparison.category, comparison.product1.id, comparison.product2.id):
                         not_transitive.append(comparison)
             print(f'Checked {comparisons.count()} comparisons.')
             print(f'Not transitive comparisons found: {len(not_transitive)}')

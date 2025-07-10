@@ -28,7 +28,7 @@ class Category(models.Model):
 
 
 class Comparison(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     product1 = models.ForeignKey(Product, related_name='product1', on_delete=models.CASCADE)
     product2 = models.ForeignKey(Product, related_name='product2', on_delete=models.CASCADE)
@@ -49,6 +49,7 @@ class Comparison(models.Model):
     
 
 class Ranking(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     score = models.FloatField()
@@ -59,5 +60,5 @@ class Ranking(models.Model):
     
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=['category', 'product'], name='unique_product_ranking')
+            models.UniqueConstraint(fields=['user', 'category', 'product'], name='unique_product_ranking_for_user')
         ]

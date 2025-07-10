@@ -43,6 +43,6 @@ class ComparisonSerializer(serializers.ModelSerializer):
 class RankingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ranking
-        fields = ['id', 'category', 'product', 'score', 'rank']
+        fields = ['id', 'user', 'category', 'product', 'score', 'rank']
         extra_kwargs = {'category': {'read_only': True}, 'product': {'read_only': True}}
         depth = 1
