@@ -25,6 +25,8 @@ function Charts() {
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [categoryX, setCategoryX] = useState(0);
     const [categoryY, setCategoryY] = useState(0);
+    const [aiUsers, setAiUsers] = useState([]);
+    const [rankingSource, setRankingSource] = useState(-1);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -32,6 +34,7 @@ function Charts() {
         getRankings();
         getCategories();
         getProducts();
+        getAiUsers();
     }, []);
 
     useEffect(() => {
@@ -89,6 +92,16 @@ function Charts() {
             });
     };
 
+    const getAiUsers = () => {
+        api.get("/api/ai-users/")
+            .then((res) => {
+                setAiUsers(res.data);
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    };
+
     const rankingX = rankings
         .filter((item) => item.category.id === categoryX)
         .sort((a, b) => a.rank - b.rank);
@@ -103,8 +116,20 @@ function Charts() {
         categories.find((cat) => cat.id === categoryY)?.name || "Y-Axis";
 
     const data = filteredProducts.map((product) => {
-        const rankX = rankingX.find((item) => item.product.id === product.id);
-        const rankY = rankingY.find((item) => item.product.id === product.id);
+        const rankX = rankingX.find(
+            (item) =>
+                item.product.id === product.id &&
+                (rankingSource !== -1
+                    ? item.user !== null && item.user.id === rankingSource
+                    : item.user === null)
+        );
+        const rankY = rankingY.find(
+            (item) =>
+                item.product.id === product.id &&
+                (rankingSource !== -1
+                    ? item.user !== null && item.user.id === rankingSource
+                    : item.user === null)
+        );
         return {
             id: product.id,
             name: product.name,
@@ -162,6 +187,23 @@ function Charts() {
                         {filteredCategories.map((cat) => (
                             <option key={cat.id} value={cat.id}>
                                 {cat.name}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+                <div className="charts-select-container">
+                    <select
+                        className="charts-select"
+                        value={rankingSource}
+                        onChange={(e) => {
+                            setRankingSource(Number(e.target.value));
+                            console.log(rankingSource);
+                        }}
+                    >
+                        <option value={-1}>All users</option>
+                        {aiUsers.map((user) => (
+                            <option key={user.id} value={user.id}>
+                                {user.username}
                             </option>
                         ))}
                     </select>

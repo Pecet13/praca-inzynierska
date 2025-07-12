@@ -11,12 +11,15 @@ function Ranking() {
     const [categories, setCategories] = useState([]);
     const [filteredCategories, setFilteredCategories] = useState([]);
     const [category, setCategory] = useState(0);
+    const [aiUsers, setAiUsers] = useState([]);
+    const [rankingSource, setRankingSource] = useState(-1);
     const [reverse, setReverse] = useState(false);
 
     useEffect(() => {
         getProductsTypes();
         getRankings();
         getCategories();
+        getAiUsers();
     }, []);
 
     useEffect(() => {
@@ -58,8 +61,24 @@ function Ranking() {
             });
     };
 
+    const getAiUsers = () => {
+        api.get("/api/ai-users/")
+            .then((res) => {
+                setAiUsers(res.data);
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    };
+
     const base = rankings
-        .filter((item) => item.category.id === category)
+        .filter(
+            (item) =>
+                item.category.id === category &&
+                (rankingSource !== -1
+                    ? (item.user !== null && item.user.id === rankingSource)
+                    : item.user === null)
+        )
         .sort((a, b) => a.rank - b.rank);
 
     let filteredRanking = reverse ? [...base].reverse() : base;
@@ -90,6 +109,21 @@ function Ranking() {
                         {filteredCategories.map((cat) => (
                             <option key={cat.id} value={cat.id}>
                                 {cat.name}
+                            </option>
+                        ))}
+                    </select>
+                    <select
+                        className="select"
+                        value={rankingSource}
+                        onChange={(e) => {
+                            setRankingSource(Number(e.target.value));
+                            console.log(rankingSource)
+                        }}
+                    >
+                        <option value={-1}>All users</option>
+                        {aiUsers.map((user) => (
+                            <option key={user.id} value={user.id}>
+                                {user.username}
                             </option>
                         ))}
                     </select>

@@ -6,7 +6,7 @@
             "category": 1,
             "product1": 1,
             "product2": 2,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -16,7 +16,7 @@
             "category": 1,
             "product1": 1,
             "product2": 3,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -26,7 +26,7 @@
             "category": 1,
             "product1": 1,
             "product2": 4,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -56,7 +56,7 @@
             "category": 1,
             "product1": 1,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -86,7 +86,7 @@
             "category": 1,
             "product1": 1,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -106,7 +106,7 @@
             "category": 1,
             "product1": 2,
             "product2": 4,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -136,7 +136,7 @@
             "category": 1,
             "product1": 2,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -166,7 +166,7 @@
             "category": 1,
             "product1": 2,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -176,7 +176,7 @@
             "category": 1,
             "product1": 3,
             "product2": 4,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -206,7 +206,7 @@
             "category": 1,
             "product1": 3,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -236,7 +236,7 @@
             "category": 1,
             "product1": 3,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -266,7 +266,7 @@
             "category": 1,
             "product1": 4,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -316,7 +316,7 @@
             "category": 1,
             "product1": 5,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -346,7 +346,7 @@
             "category": 1,
             "product1": 5,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -356,7 +356,7 @@
             "category": 1,
             "product1": 6,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -386,7 +386,7 @@
             "category": 1,
             "product1": 6,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -426,7 +426,7 @@
             "category": 1,
             "product1": 8,
             "product2": 9,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -436,7 +436,7 @@
             "category": 1,
             "product1": 8,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -446,7 +446,7 @@
             "category": 1,
             "product1": 9,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -456,7 +456,7 @@
             "category": 2,
             "product1": 1,
             "product2": 2,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -466,7 +466,7 @@
             "category": 2,
             "product1": 1,
             "product2": 3,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -476,7 +476,7 @@
             "category": 2,
             "product1": 1,
             "product2": 4,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -506,7 +506,7 @@
             "category": 2,
             "product1": 1,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -536,7 +536,7 @@
             "category": 2,
             "product1": 1,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -556,7 +556,7 @@
             "category": 2,
             "product1": 2,
             "product2": 4,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -586,7 +586,7 @@
             "category": 2,
             "product1": 2,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -616,7 +616,7 @@
             "category": 2,
             "product1": 2,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -626,7 +626,7 @@
             "category": 2,
             "product1": 3,
             "product2": 4,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -656,7 +656,7 @@
             "category": 2,
             "product1": 3,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -686,7 +686,7 @@
             "category": 2,
             "product1": 3,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -716,7 +716,7 @@
             "category": 2,
             "product1": 4,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -766,7 +766,7 @@
             "category": 2,
             "product1": 5,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -796,7 +796,7 @@
             "category": 2,
             "product1": 5,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -806,7 +806,7 @@
             "category": 2,
             "product1": 6,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -836,7 +836,7 @@
             "category": 2,
             "product1": 6,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -876,7 +876,7 @@
             "category": 2,
             "product1": 8,
             "product2": 9,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -886,7 +886,7 @@
             "category": 2,
             "product1": 8,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -896,7 +896,7 @@
             "category": 2,
             "product1": 9,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -906,7 +906,7 @@
             "category": 3,
             "product1": 1,
             "product2": 2,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -916,7 +916,7 @@
             "category": 3,
             "product1": 1,
             "product2": 3,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -926,7 +926,7 @@
             "category": 3,
             "product1": 1,
             "product2": 4,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -956,7 +956,7 @@
             "category": 3,
             "product1": 1,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -986,7 +986,7 @@
             "category": 3,
             "product1": 1,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1006,7 +1006,7 @@
             "category": 3,
             "product1": 2,
             "product2": 4,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1036,7 +1036,7 @@
             "category": 3,
             "product1": 2,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1066,7 +1066,7 @@
             "category": 3,
             "product1": 2,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1076,7 +1076,7 @@
             "category": 3,
             "product1": 3,
             "product2": 4,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1106,7 +1106,7 @@
             "category": 3,
             "product1": 3,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1136,7 +1136,7 @@
             "category": 3,
             "product1": 3,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1166,7 +1166,7 @@
             "category": 3,
             "product1": 4,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1216,7 +1216,7 @@
             "category": 3,
             "product1": 5,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1246,7 +1246,7 @@
             "category": 3,
             "product1": 5,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1256,7 +1256,7 @@
             "category": 3,
             "product1": 6,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1286,7 +1286,7 @@
             "category": 3,
             "product1": 6,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1326,7 +1326,7 @@
             "category": 3,
             "product1": 8,
             "product2": 9,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1336,7 +1336,7 @@
             "category": 3,
             "product1": 8,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1346,7 +1346,7 @@
             "category": 3,
             "product1": 9,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1356,7 +1356,7 @@
             "category": 4,
             "product1": 1,
             "product2": 2,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1366,7 +1366,7 @@
             "category": 4,
             "product1": 1,
             "product2": 3,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1376,7 +1376,7 @@
             "category": 4,
             "product1": 1,
             "product2": 4,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1406,7 +1406,7 @@
             "category": 4,
             "product1": 1,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1436,7 +1436,7 @@
             "category": 4,
             "product1": 1,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1456,7 +1456,7 @@
             "category": 4,
             "product1": 2,
             "product2": 4,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1486,7 +1486,7 @@
             "category": 4,
             "product1": 2,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1516,7 +1516,7 @@
             "category": 4,
             "product1": 2,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1526,7 +1526,7 @@
             "category": 4,
             "product1": 3,
             "product2": 4,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1556,7 +1556,7 @@
             "category": 4,
             "product1": 3,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1586,7 +1586,7 @@
             "category": 4,
             "product1": 3,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1616,7 +1616,7 @@
             "category": 4,
             "product1": 4,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1666,7 +1666,7 @@
             "category": 4,
             "product1": 5,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1696,7 +1696,7 @@
             "category": 4,
             "product1": 5,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1706,7 +1706,7 @@
             "category": 4,
             "product1": 6,
             "product2": 7,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1736,7 +1736,7 @@
             "category": 4,
             "product1": 6,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1776,7 +1776,7 @@
             "category": 4,
             "product1": 8,
             "product2": 9,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1786,7 +1786,7 @@
             "category": 4,
             "product1": 8,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1796,7 +1796,7 @@
             "category": 4,
             "product1": 9,
             "product2": 10,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1806,7 +1806,7 @@
             "category": 5,
             "product1": 11,
             "product2": 12,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1816,7 +1816,7 @@
             "category": 5,
             "product1": 11,
             "product2": 13,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1826,7 +1826,7 @@
             "category": 5,
             "product1": 11,
             "product2": 14,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1836,7 +1836,7 @@
             "category": 5,
             "product1": 11,
             "product2": 15,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1856,7 +1856,7 @@
             "category": 5,
             "product1": 12,
             "product2": 13,
-            "result": "Less"
+            "result": "Equal"
         }
     },
     {
@@ -1866,7 +1866,7 @@
             "category": 5,
             "product1": 12,
             "product2": 14,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1876,7 +1876,7 @@
             "category": 5,
             "product1": 12,
             "product2": 15,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1896,7 +1896,7 @@
             "category": 5,
             "product1": 13,
             "product2": 14,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1906,7 +1906,7 @@
             "category": 5,
             "product1": 13,
             "product2": 15,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1956,7 +1956,7 @@
             "category": 6,
             "product1": 11,
             "product2": 12,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1966,7 +1966,7 @@
             "category": 6,
             "product1": 11,
             "product2": 13,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1976,7 +1976,7 @@
             "category": 6,
             "product1": 11,
             "product2": 14,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -1986,7 +1986,7 @@
             "category": 6,
             "product1": 11,
             "product2": 15,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2006,7 +2006,7 @@
             "category": 6,
             "product1": 12,
             "product2": 13,
-            "result": "Less"
+            "result": "Equal"
         }
     },
     {
@@ -2016,7 +2016,7 @@
             "category": 6,
             "product1": 12,
             "product2": 14,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2026,7 +2026,7 @@
             "category": 6,
             "product1": 12,
             "product2": 15,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2046,7 +2046,7 @@
             "category": 6,
             "product1": 13,
             "product2": 14,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2056,7 +2056,7 @@
             "category": 6,
             "product1": 13,
             "product2": 15,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2106,7 +2106,7 @@
             "category": 7,
             "product1": 11,
             "product2": 12,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2116,7 +2116,7 @@
             "category": 7,
             "product1": 11,
             "product2": 13,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2126,7 +2126,7 @@
             "category": 7,
             "product1": 11,
             "product2": 14,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2136,7 +2136,7 @@
             "category": 7,
             "product1": 11,
             "product2": 15,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2156,7 +2156,7 @@
             "category": 7,
             "product1": 12,
             "product2": 13,
-            "result": "Less"
+            "result": "Equal"
         }
     },
     {
@@ -2166,7 +2166,7 @@
             "category": 7,
             "product1": 12,
             "product2": 14,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2176,7 +2176,7 @@
             "category": 7,
             "product1": 12,
             "product2": 15,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2196,7 +2196,7 @@
             "category": 7,
             "product1": 13,
             "product2": 14,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2206,7 +2206,7 @@
             "category": 7,
             "product1": 13,
             "product2": 15,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2256,7 +2256,7 @@
             "category": 8,
             "product1": 17,
             "product2": 18,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2266,7 +2266,7 @@
             "category": 8,
             "product1": 17,
             "product2": 19,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2276,7 +2276,7 @@
             "category": 8,
             "product1": 17,
             "product2": 20,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2286,7 +2286,7 @@
             "category": 8,
             "product1": 17,
             "product2": 21,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2296,7 +2296,7 @@
             "category": 8,
             "product1": 17,
             "product2": 22,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2306,7 +2306,7 @@
             "category": 8,
             "product1": 17,
             "product2": 23,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2316,7 +2316,7 @@
             "category": 8,
             "product1": 17,
             "product2": 24,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2326,7 +2326,7 @@
             "category": 8,
             "product1": 18,
             "product2": 19,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2346,7 +2346,7 @@
             "category": 8,
             "product1": 18,
             "product2": 21,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2356,7 +2356,7 @@
             "category": 8,
             "product1": 18,
             "product2": 22,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2396,7 +2396,7 @@
             "category": 8,
             "product1": 19,
             "product2": 21,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2406,7 +2406,7 @@
             "category": 8,
             "product1": 19,
             "product2": 22,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2436,7 +2436,7 @@
             "category": 8,
             "product1": 20,
             "product2": 21,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2446,7 +2446,7 @@
             "category": 8,
             "product1": 20,
             "product2": 22,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2536,7 +2536,7 @@
             "category": 9,
             "product1": 17,
             "product2": 18,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2546,7 +2546,7 @@
             "category": 9,
             "product1": 17,
             "product2": 19,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2556,7 +2556,7 @@
             "category": 9,
             "product1": 17,
             "product2": 20,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2566,7 +2566,7 @@
             "category": 9,
             "product1": 17,
             "product2": 21,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2576,7 +2576,7 @@
             "category": 9,
             "product1": 17,
             "product2": 22,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2586,7 +2586,7 @@
             "category": 9,
             "product1": 17,
             "product2": 23,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2596,7 +2596,7 @@
             "category": 9,
             "product1": 17,
             "product2": 24,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2606,7 +2606,7 @@
             "category": 9,
             "product1": 18,
             "product2": 19,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2626,7 +2626,7 @@
             "category": 9,
             "product1": 18,
             "product2": 21,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2636,7 +2636,7 @@
             "category": 9,
             "product1": 18,
             "product2": 22,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2676,7 +2676,7 @@
             "category": 9,
             "product1": 19,
             "product2": 21,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2686,7 +2686,7 @@
             "category": 9,
             "product1": 19,
             "product2": 22,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2716,7 +2716,7 @@
             "category": 9,
             "product1": 20,
             "product2": 21,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2726,7 +2726,7 @@
             "category": 9,
             "product1": 20,
             "product2": 22,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2816,7 +2816,7 @@
             "category": 10,
             "product1": 17,
             "product2": 18,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2826,7 +2826,7 @@
             "category": 10,
             "product1": 17,
             "product2": 19,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2836,7 +2836,7 @@
             "category": 10,
             "product1": 17,
             "product2": 20,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2846,7 +2846,7 @@
             "category": 10,
             "product1": 17,
             "product2": 21,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2856,7 +2856,7 @@
             "category": 10,
             "product1": 17,
             "product2": 22,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2866,7 +2866,7 @@
             "category": 10,
             "product1": 17,
             "product2": 23,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2876,7 +2876,7 @@
             "category": 10,
             "product1": 17,
             "product2": 24,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2886,7 +2886,7 @@
             "category": 10,
             "product1": 18,
             "product2": 19,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2906,7 +2906,7 @@
             "category": 10,
             "product1": 18,
             "product2": 21,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2916,7 +2916,7 @@
             "category": 10,
             "product1": 18,
             "product2": 22,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2956,7 +2956,7 @@
             "category": 10,
             "product1": 19,
             "product2": 21,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2966,7 +2966,7 @@
             "category": 10,
             "product1": 19,
             "product2": 22,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -2996,7 +2996,7 @@
             "category": 10,
             "product1": 20,
             "product2": 21,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -3006,7 +3006,7 @@
             "category": 10,
             "product1": 20,
             "product2": 22,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -3096,7 +3096,7 @@
             "category": 11,
             "product1": 17,
             "product2": 18,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -3106,7 +3106,7 @@
             "category": 11,
             "product1": 17,
             "product2": 19,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -3116,7 +3116,7 @@
             "category": 11,
             "product1": 17,
             "product2": 20,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -3126,7 +3126,7 @@
             "category": 11,
             "product1": 17,
             "product2": 21,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -3136,7 +3136,7 @@
             "category": 11,
             "product1": 17,
             "product2": 22,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -3146,7 +3146,7 @@
             "category": 11,
             "product1": 17,
             "product2": 23,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -3156,7 +3156,7 @@
             "category": 11,
             "product1": 17,
             "product2": 24,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -3166,7 +3166,7 @@
             "category": 11,
             "product1": 18,
             "product2": 19,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -3186,7 +3186,7 @@
             "category": 11,
             "product1": 18,
             "product2": 21,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -3196,7 +3196,7 @@
             "category": 11,
             "product1": 18,
             "product2": 22,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -3236,7 +3236,7 @@
             "category": 11,
             "product1": 19,
             "product2": 21,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -3246,7 +3246,7 @@
             "category": 11,
             "product1": 19,
             "product2": 22,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -3276,7 +3276,7 @@
             "category": 11,
             "product1": 20,
             "product2": 21,
-            "result": "Less"
+            "result": "More"
         }
     },
     {
@@ -3286,7 +3286,7 @@
             "category": 11,
             "product1": 20,
             "product2": 22,
-            "result": "Less"
+            "result": "More"
         }
     },
     {

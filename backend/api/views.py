@@ -15,6 +15,12 @@ class CreateUserView(generics.CreateAPIView):
     permission_classes = [AllowAny]
 
 
+class AIUserView(generics.ListAPIView):
+    queryset = User.objects.filter(username__in=['ChatGPT', 'Gemini'])
+    serializer_class = UserSerializer
+    permission_classes = [AllowAny]
+
+
 class ProductTypeListView(generics.ListAPIView):
     queryset = ProductType.objects.all()
     serializer_class = ProductTypeSerializer
