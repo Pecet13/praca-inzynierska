@@ -197,7 +197,6 @@ function Charts() {
                         value={rankingSource}
                         onChange={(e) => {
                             setRankingSource(Number(e.target.value));
-                            console.log(rankingSource);
                         }}
                     >
                         <option value={-1}>All users</option>

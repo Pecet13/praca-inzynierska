@@ -48,7 +48,7 @@ function ProductPage() {
     return (
         <div className="product-wrapper">
             <h1>{product.name}</h1>
-            <h2>Product type: {productType.name}</h2>
+            {productType && <h2>Product type: {productType.name}</h2>}
             <div className="product-details">
                 <div className="product-details-image-container">
                     <img

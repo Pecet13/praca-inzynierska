@@ -76,7 +76,7 @@ function Ranking() {
             (item) =>
                 item.category.id === category &&
                 (rankingSource !== -1
-                    ? (item.user !== null && item.user.id === rankingSource)
+                    ? item.user !== null && item.user.id === rankingSource
                     : item.user === null)
         )
         .sort((a, b) => a.rank - b.rank);
@@ -117,7 +117,6 @@ function Ranking() {
                         value={rankingSource}
                         onChange={(e) => {
                             setRankingSource(Number(e.target.value));
-                            console.log(rankingSource)
                         }}
                     >
                         <option value={-1}>All users</option>
