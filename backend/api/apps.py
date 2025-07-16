@@ -12,7 +12,7 @@ class ApiConfig(AppConfig):
         # Ensure the scheduler is only started once
         if getattr(self, 'scheduler_started', False):
             return
-        
+
         scheduler = BackgroundScheduler()
         scheduler.add_job(
             update_rankings,
@@ -20,7 +20,7 @@ class ApiConfig(AppConfig):
             minutes=5,
             id='update_rankings_job',
             replace_existing=True,
-            max_instances=1
+            max_instances=1,
         )
         scheduler.start()
         self.scheduler_started = True

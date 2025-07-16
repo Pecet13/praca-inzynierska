@@ -17,7 +17,7 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-    
+
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -30,9 +30,17 @@ class Category(models.Model):
 class Comparison(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    product1 = models.ForeignKey(Product, related_name='product1', on_delete=models.CASCADE)
-    product2 = models.ForeignKey(Product, related_name='product2', on_delete=models.CASCADE)
-    result = models.CharField(max_length=100, choices=[('More', 'more'), ('Less', 'less'), ('Equal', 'equal')], default='Equal')
+    product1 = models.ForeignKey(
+        Product, related_name='product1', on_delete=models.CASCADE
+    )
+    product2 = models.ForeignKey(
+        Product, related_name='product2', on_delete=models.CASCADE
+    )
+    result = models.CharField(
+        max_length=100,
+        choices=[('More', 'more'), ('Less', 'less'), ('Equal', 'equal')],
+        default='Equal',
+    )
 
     def __str__(self):
         res = f"Comparison in category: {self.category.name}, "
@@ -41,12 +49,15 @@ class Comparison(models.Model):
         else:
             res += f"{self.product1.name} is {self.result} than {self.product2.name}"
         return res
-    
+
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=['user', 'category', 'product1', 'product2'], name='unique_user_comparison')
+            models.UniqueConstraint(
+                fields=['user', 'category', 'product1', 'product2'],
+                name='unique_user_comparison',
+            )
         ]
-    
+
 
 class Ranking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
@@ -57,8 +68,11 @@ class Ranking(models.Model):
 
     def __str__(self):
         return f"{self.product.name} - {self.category.name}, Rank: {self.rank}, Score: {self.score}"
-    
+
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=['user', 'category', 'product'], name='unique_product_ranking_for_user')
+            models.UniqueConstraint(
+                fields=['user', 'category', 'product'],
+                name='unique_product_ranking_for_user',
+            )
         ]

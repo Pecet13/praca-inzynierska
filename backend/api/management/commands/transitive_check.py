@@ -11,7 +11,7 @@ class Command(BaseCommand):
             '--user_id',
             type=int,
             help='ID of the user to check for transitive comparisons (default value is 1)',
-            default=1
+            default=1,
         )
 
     def handle(self, *args, **options):
@@ -20,15 +20,31 @@ class Command(BaseCommand):
             not_transitive = []
             for comparison in comparisons:
                 if comparison.result == 'More':
-                    if user_path_exists(options['user_id'], comparison.category, comparison.product2.id, comparison.product1.id):
+                    if user_path_exists(
+                        options['user_id'],
+                        comparison.category,
+                        comparison.product2.id,
+                        comparison.product1.id,
+                    ):
                         not_transitive.append(comparison)
                 elif comparison.result == 'Less':
-                    if user_path_exists(options['user_id'], comparison.category, comparison.product1.id, comparison.product2.id):
+                    if user_path_exists(
+                        options['user_id'],
+                        comparison.category,
+                        comparison.product1.id,
+                        comparison.product2.id,
+                    ):
                         not_transitive.append(comparison)
             print(f'Checked {comparisons.count()} comparisons.')
             print(f'Not transitive comparisons found: {len(not_transitive)}')
             print(not_transitive)
-            percentage = (len(not_transitive) / comparisons.count()) * 100 if comparisons.count() > 0 else 0
-            self.stdout.write(self.style.SUCCESS(f'Not transitive percentage: {percentage:.2f}%'))
+            percentage = (
+                (len(not_transitive) / comparisons.count()) * 100
+                if comparisons.count() > 0
+                else 0
+            )
+            self.stdout.write(
+                self.style.SUCCESS(f'Not transitive percentage: {percentage:.2f}%')
+            )
         except Exception as e:
             self.stderr.write(self.style.ERROR(f'Error updating rankings: {e}'))

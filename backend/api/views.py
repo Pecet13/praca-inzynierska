@@ -4,7 +4,14 @@ from rest_framework import generics, status
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.exceptions import ValidationError
-from .serializers import UserSerializer, ProductTypeSerializer, ProductSerializer, CategorySerializer, ComparisonSerializer, RankingSerializer
+from .serializers import (
+    UserSerializer,
+    ProductTypeSerializer,
+    ProductSerializer,
+    CategorySerializer,
+    ComparisonSerializer,
+    RankingSerializer,
+)
 from .models import ProductType, Product, Category, Comparison, Ranking
 from .services import user_path_exists
 
@@ -52,13 +59,15 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
     def get_queryset(self):
         product1 = self.kwargs['pk']
         return Comparison.objects.filter(user=self.request.user, product1=product1)
-    
+
     @transaction.atomic
     def create(self, request, *args, **kwargs):
         product1 = Product.objects.get(pk=kwargs['pk'])
 
         # Validate and create new comparisons
-        serializer = self.get_serializer(data=request.data, many=isinstance(request.data, list))
+        serializer = self.get_serializer(
+            data=request.data, many=isinstance(request.data, list)
+        )
         serializer.is_valid(raise_exception=True)
 
         # Check for duplicate comparisons and cycles
@@ -67,16 +76,29 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
             category = item['category']
             product2 = item['product2']
             if product1.product_type != product2.product_type:
-                raise ValidationError(f'Product {product2.name} does not belong to the same product type as {product1.name}.')
+                raise ValidationError(
+                    f'Product {product2.name} does not belong to the same product type as {product1.name}.'
+                )
             if category.product_type != product1.product_type:
-                raise ValidationError(f'Category {category.name} does not belong to the same product type as {product1.name}.')
+                raise ValidationError(
+                    f'Category {category.name} does not belong to the same product type as {product1.name}.'
+                )
             comparison_key = (category.id, product2.id)
             if comparison_key in seen_comparisons:
-                raise ValidationError(f'Duplicate comparison with {product2.name} in category {category.name}.')
+                raise ValidationError(
+                    f'Duplicate comparison with {product2.name} in category {category.name}.'
+                )
             seen_comparisons.add(comparison_key)
-            
-            if Comparison.objects.filter(user=request.user, category=category, product1=product2, product2=product1).exists():
-                raise ValidationError(f'You have already compared {product1.name} and {product2.name} in category {category.name}.')
+
+            if Comparison.objects.filter(
+                user=request.user,
+                category=category,
+                product1=product2,
+                product2=product1,
+            ).exists():
+                raise ValidationError(
+                    f'You have already compared {product1.name} and {product2.name} in category {category.name}.'
+                )
             if item['result'] == 'Equal':
                 continue
             if item['result'] == 'More':
@@ -84,7 +106,9 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
             else:
                 src_product_id, dst_product_id = product1.id, product2.id
             if user_path_exists(request.user, category, src_product_id, dst_product_id):
-                raise ValidationError(f'Cycle detected between {product1.name} and {product2.name} in category {category.name}.')
+                raise ValidationError(
+                    f'Cycle detected between {product1.name} and {product2.name} in category {category.name}.'
+                )
 
         # Remove existing comparisons
         Comparison.objects.filter(user=request.user, product1=product1).delete()
@@ -97,10 +121,10 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
                     category=item['category'],
                     product1=product1,
                     product2=item['product2'],
-                    result=item['result']
+                    result=item['result'],
                 )
             )
-        
+
         # Serialize the created comparisons
         out = ComparisonSerializer(instances, many=True)
         return Response(out.data, status=status.HTTP_201_CREATED)
