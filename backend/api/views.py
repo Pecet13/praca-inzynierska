@@ -75,6 +75,10 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
         for item in serializer.validated_data:
             category = item['category']
             product2 = item['product2']
+            if product1.id == product2.id:
+                raise ValidationError(
+                    f'Cannot compare {product1.name} with itself in category {category.name}.'
+                )
             if product1.product_type != product2.product_type:
                 raise ValidationError(
                     f'Product {product2.name} does not belong to the same product type as {product1.name}.'
