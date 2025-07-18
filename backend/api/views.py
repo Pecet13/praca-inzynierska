@@ -111,7 +111,7 @@ class ComparisonListCreateView(generics.ListCreateAPIView):
                 src_product_id, dst_product_id = product1.id, product2.id
             if user_path_exists(request.user, category, src_product_id, dst_product_id):
                 raise ValidationError(
-                    f'Cycle detected between {product1.name} and {product2.name} in category {category.name}.'
+                    f'Comparison between {product1.name} and {product2.name} in category {category.name} contradicts with the data you provided before.'
                 )
 
         # Remove existing comparisons
