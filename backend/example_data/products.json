@@ -193,7 +193,7 @@
         "model": "api.product",
         "pk": 20,
         "fields": {
-            "name": "Lays's Sour Cream & Onion",
+            "name": "Lay's Sour Cream & Onion",
             "product_type": 3,
             "description": "Quantity: 175 g\nPackaging: Plastic, Bag\nBrands: Lay's",
             "image_url": "https://images.openfoodfacts.org/images/products/406/080/018/1565/front_de.41.400.jpg"
