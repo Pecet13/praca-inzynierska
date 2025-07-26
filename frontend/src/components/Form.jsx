@@ -23,6 +23,14 @@ function Form({ route, method }) {
             return;
         }
 
+        if (
+            method === "register" &&
+            (!username || !password || !confirmPassword)
+        ) {
+            alert("No field can be empty");
+            return;
+        }
+
         try {
             const res = await api.post(route, { username, password });
             if (method === "login") {
@@ -31,8 +39,17 @@ function Form({ route, method }) {
             } else {
                 navigate("/login");
             }
-        } catch (error) {
-            alert(error);
+        } catch (err) {
+            if (err.response) {
+                if (err.response.status === 400) {
+                    alert("No field can be empty");
+                }
+                if (err.response.status === 401) {
+                    alert("Invalid login or password");
+                }
+            } else {
+                alert("An unexpected error occurred:", err);
+            }
         }
     };
 
