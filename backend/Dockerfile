@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM python:3.12.9-slim
 
 WORKDIR /app
 
@@ -14,4 +14,4 @@ ENTRYPOINT ["./entrypoint.sh"]
 
 EXPOSE 8000
 
-CMD ["gunicorn", "backend.wsgi:application", "--bind", "0.0.0:8000"]
+CMD ["gunicorn", "backend.wsgi:application", "--bind", "0.0.0.0:8000"]
