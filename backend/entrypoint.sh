@@ -10,14 +10,14 @@ print(re.escape(get_random_secret_key()))')
     sed -i "s/^SECRET_KEY=.*$/SECRET_KEY=${NEW_KEY}/" .env
 fi
 
-echo "DB host=$POSTGRES_HOST, DB name=$POSTGRES_DB"
-
 python3 manage.py migrate --noinput
 
-if [ ! -f .data_loaded ] 
+DATA_LOADED=$(python3 -c 'import os; os.environ.setdefault("DJANGO_SETTINGS_MODULE", "backend.settings");
+import django; django.setup(); from api.models import Product; print(Product.objects.exists())')
+
+if [ "$DATA_LOADED" ] 
 then
     python3 manage.py loaddata example_data/*.json
-    touch .data_loaded
 fi
 
 python3 manage.py collectstatic --noinput
