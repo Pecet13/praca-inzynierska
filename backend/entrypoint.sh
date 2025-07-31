@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 if [ ! -f .env ] 
 then
     cp .env.example .env
@@ -8,8 +10,16 @@ print(re.escape(get_random_secret_key()))')
     sed -i "s/^SECRET_KEY=.*$/SECRET_KEY=${NEW_KEY}/" .env
 fi
 
+echo "DB host=$POSTGRES_HOST, DB name=$POSTGRES_DB"
+
 python3 manage.py migrate --noinput
-python3 manage.py loaddata example_data/*.json
+
+if [ ! -f .data_loaded ] 
+then
+    python3 manage.py loaddata example_data/*.json
+    touch .data_loaded
+fi
+
 python3 manage.py collectstatic --noinput
 python3 manage.py update_rankings
 

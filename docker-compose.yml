@@ -8,6 +8,8 @@ services:
             - 4173:4173
         volumes:
             - ./frontend:/app
+        depends_on:
+            - backend
 
     backend:
         build:
@@ -15,28 +17,30 @@ services:
         env_file:
             - backend/.env
         environment:
-            - DB_HOST=db
+            POSTGRES_HOST: db
         ports:
             - 8000:8000
         volumes:
             - ./backend:/app
             - static_volume:/app/static
         depends_on:
-            - db
-        
+            db:
+                condition: service_healthy
+
     db:
         image: postgres:17-alpine
         restart: always
         env_file:
             - backend/.env
-        environment:
-            - POSTGRES_DB=${DB_NAME}
-            - POSTGRES_USER=${DB_USER}
-            - POSTGRES_PASSWORD=${DB_PASSWORD}
         ports:
             - 5432:5432
         volumes:
             - postgres_data:/var/lib/postgresql/data
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U inz_user -d inz_db"]
+            interval: 5s
+            timeout: 5s
+            retries: 5
 
 volumes:
     static_volume:

@@ -178,3 +178,6 @@ cython_debug/
 
 # static files
 static/
+
+# entrypoint loaddata check
+.data_loaded

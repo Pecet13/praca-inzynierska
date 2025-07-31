@@ -10,7 +10,7 @@ RUN chmod +x entrypoint.sh
 
 ENV PYTHONUNBUFFERED=1
 
-ENTRYPOINT ["sh", "./entrypoint.sh"]
+ENTRYPOINT ["bash", "./entrypoint.sh"]
 
 EXPOSE 8000
 
