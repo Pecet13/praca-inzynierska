@@ -24,8 +24,9 @@ function Form({ route, method }) {
         }
 
         if (
-            method === "register" &&
-            (!username || !password || !confirmPassword)
+            !username ||
+            !password ||
+            (method === "register" && !confirmPassword)
         ) {
             alert("No field can be empty");
             return;
@@ -42,7 +43,7 @@ function Form({ route, method }) {
         } catch (err) {
             if (err.response) {
                 if (err.response.status === 400) {
-                    alert("No field can be empty");
+                    alert("Username already taken");
                 }
                 if (err.response.status === 401) {
                     alert("Invalid login or password");

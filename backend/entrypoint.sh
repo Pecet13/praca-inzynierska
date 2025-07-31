@@ -15,7 +15,7 @@ python3 manage.py migrate --noinput
 DATA_LOADED=$(python3 -c 'import os; os.environ.setdefault("DJANGO_SETTINGS_MODULE", "backend.settings");
 import django; django.setup(); from api.models import Product; print(Product.objects.exists())')
 
-if [ "$DATA_LOADED" ] 
+if [ ! "$DATA_LOADED" ] 
 then
     python3 manage.py loaddata example_data/*.json
 fi
