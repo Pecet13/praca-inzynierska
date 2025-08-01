@@ -1,4 +1,4 @@
-FROM node:20.14-slim
+FROM node:20.14-slim as build
 
 WORKDIR /app
 
@@ -10,6 +10,10 @@ RUN npm install
 
 RUN npm run build
 
-EXPOSE 4173
+FROM nginx:stable-alpine
 
-CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "4173"]
+COPY --from=build /app/dist /usr/share/nginx/html
+
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
