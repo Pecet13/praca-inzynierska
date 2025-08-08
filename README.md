@@ -2,7 +2,7 @@
 
 ## PL: System opinii porównawczych
 
-Do uruchomienia systemu wymagany jest Docker
+Do uruchomienia systemu wymagany jest Docker.
 
 Pierwsze uruchomienie (z budową obrazów) w tle
 ```
@@ -39,7 +39,7 @@ docker compose down --volumes
 
 ## EN: Comparative review system
 
-Docker is required to run the system
+Docker is required to run the system.
 
 First run (with image building) in the background
 ```
