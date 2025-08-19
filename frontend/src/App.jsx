@@ -1,5 +1,4 @@
-import react from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
@@ -35,7 +34,10 @@ function App() {
                         <Route path="/ranking" element={<Ranking />} />
                         <Route path="/charts" element={<Charts />} />
                         <Route path="/products/:id" element={<ProductPage />} />
-                        <Route path="/products/:id/review" element={<Review />} />
+                        <Route
+                            path="/products/:id/review"
+                            element={<Review />}
+                        />
                         <Route path="*" element={<NotFound />} />
                     </Routes>
                 </div>
