@@ -1,4 +1,5 @@
 from django.core.management.base import BaseCommand
+from django.contrib.auth.models import User
 from api.services import user_path_exists
 from api.models import Comparison
 
@@ -17,7 +18,9 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         try:
             comparisons = Comparison.objects.filter(user=options['user_id'])
-            not_transitive = []
+            username = User.objects.get(id=options['user_id']).username
+            self.stdout.write(f'Checking transitive comparisons for user: {username}')
+            non_transitive = []
             for comparison in comparisons:
                 if comparison.result == 'More':
                     if user_path_exists(
@@ -26,7 +29,7 @@ class Command(BaseCommand):
                         comparison.product2.id,
                         comparison.product1.id,
                     ):
-                        not_transitive.append(comparison)
+                        non_transitive.append(comparison)
                 elif comparison.result == 'Less':
                     if user_path_exists(
                         options['user_id'],
@@ -34,17 +37,16 @@ class Command(BaseCommand):
                         comparison.product1.id,
                         comparison.product2.id,
                     ):
-                        not_transitive.append(comparison)
-            print(f'Checked {comparisons.count()} comparisons.')
-            print(f'Not transitive comparisons found: {len(not_transitive)}')
-            print(not_transitive)
+                        non_transitive.append(comparison)
+            self.stdout.write(f'Checked {comparisons.count()} comparisons.')
+            self.stdout.write(f'Non-transitive comparisons found: {len(non_transitive)}')
             percentage = (
-                (len(not_transitive) / comparisons.count()) * 100
+                (len(non_transitive) / comparisons.count()) * 100
                 if comparisons.count() > 0
                 else 0
             )
             self.stdout.write(
-                self.style.SUCCESS(f'Not transitive percentage: {percentage:.2f}%')
+                self.style.SUCCESS(f'Non-transitive percentage: {percentage:.2f}%')
             )
         except Exception as e:
             self.stderr.write(self.style.ERROR(f'Error updating rankings: {e}'))
